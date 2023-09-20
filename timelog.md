@@ -1,9 +1,9 @@
 # Timelog
 
-* PROJECT NAME
-* YOUR NAME
-* STUDENT_ID
-* SUPERVISOR NAME
+* Predictive Models of Student Learning Behaviour
+* Elisabet Tammjarv
+* 2554321T
+* Alistair Morrison
 
 ## Guidance
 
@@ -14,13 +14,19 @@
 
 ## Week 1
 
-### 19 Oct 2019
+### 18 Sep 2023
 
-* *4 hours* Read the project guidance notes
-* *0.5 hour* Created GitLab repository and cloned the cookiecutter for the projects
-* *1 hour* Modified dissertation template, compiled  
+* *1 hour* Brainstormed on project topic and created a post it note mindmap 
 
-## 20 Oct 2019
+### 19 Sep 2023
 
-* *1 hour* meeting with supervisor
-* *2 hours* writing initial version of test harness
+* *1 hour* Read the project guidance notes, set up Notion page for informal project tracking and notes
+
+### 20 Sep 2023
+
+* *0.5 hour* Created GitHub repository and cloned the cookiecutter for the projects, renewed free Pycharm licence
+* *0.5 hour* Created online mindmap after viewing the post-it note one and seeing my somewhat illegible handwriting
+
+## 21 Sep 2023
+
+* *1 hour* meeting with supervisor 
