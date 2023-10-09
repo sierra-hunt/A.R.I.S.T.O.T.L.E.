@@ -12,7 +12,7 @@
 * This timelog should be filled out honestly, regularly (daily) and accurately. It is for *your* benefit.
 * Follow the structure provided, grouping time by weeks.  Quantise time to the half hour.
 
-## Week 1 - calm
+## Week 1
 
 ### 18 Sep 2023
 
@@ -45,3 +45,37 @@
 * *2 hours* Started researching for relevant literature (factors, specifically online engagement, OU, etc.)
 * *0.5 hour* Checked to see what kind of data moodle gathers and read up on their API
 * *0.5 hour* Looked a little into ethical procedures for data gathering (qualitative analysis)
+
+### 28 Sep 2023
+
+* *1 hour* Meeting with supervisor plus preperatory notes on notion.
+* *2.5 hours* Research - working through my tabs (finally). Taking notes on the notion page. This is where my PC started refusing to open my repository.
+
+### 29 Sep 2023
+
+* *2 hours* Still working through the moodle links for LA! 
+
+## Week 3
+
+### 3 Oct 2023
+
+* *2 hours* Still working through those links. Greatly overestimated how quickly I can read. Got 22 papers ranked by usefulness and key takeaways summarized now!
+
+### 4 Oct 2023
+
+* *1 hour* Read through UofG policy on LA and the staff section. Hunted for details on MyPath and failed.
+* *1 hour* Drafted notes for meeting with Alistair tomorrow. Attempted to finally summarize what I'm doing.
+
+### 5 Oct 2023
+
+* *1.5 hours* Read through my notes on MoodleResearch, cleaned it up, and had a brief meeting with supervisor.
+
+### 6 Oct 2023 
+
+* *2 hours* Read through UofG 21-25 teaching and learning strategy, took notes. Looked at Strathy and Edi policies and projects involving LA specifically with the 'Creepy Analytics' paper in mind (MoodleResearch).
+
+## Week 4
+
+### 9 Oct 2023 
+
+* *0.5 hours* Finally managed to open the repository! I need to severely deep-clean my pc. Added timelogs in from notion and started a post-it note wall for sectioning out my project.  
