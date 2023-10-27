@@ -78,4 +78,44 @@
 
 ### 9 Oct 2023 
 
-* *0.5 hours* Finally managed to open the repository! I need to severely deep-clean my pc. Added timelogs in from notion and started a post-it note wall for sectioning out my project.  
+* *0.5 hours* Finally managed to open the repository! I need to severely deep-clean my pc. Added timelogs in from notion and started a post-it note wall for sectioning out my project.
+
+### 10 Oct 2023
+
+* *4 hours* Had a meeting with Nina about MyPath, checked and read through Ethics guidelines AGAIN, completed further research into literature reviews, went through previosuly found papers and outlined the ones that have potential for bias
+
+### 12 Oct 2023
+
+* *2 hours* Prepared project overview document for supervisor and wrote up agenda for meeting, then had the meeting.
+
+### 15 Oct 2023
+
+* *3.5 hours* Attempted  to write up the draft for Introduction.
+* *0.5 hours* Fleshed out high-level key topics for my Literature Review!!
+* *1 hour * Started fleshing out Bakground and Analysis
+
+### 18 Oct 2023
+* *2 hours* Struggled to find qualitative analysis for LA from students.
+
+### 19 Oct 2023
+* *1 hour* Wrote up meeting notes and had meeting with Supervisor.
+
+### 20 Oct 2023
+* *4 hours* Typed up literatyre review.
+
+### 21 Oct 2023
+* *3 hours* Agressively revised literature review then deleted it because I was not very happy with the shape it was taking. There was no clear narrative and no clear trail of significance to most of what I was saying - felt like reading an infodump.
+* 1 hour* Looked more closely at research papers involving literatre reviews that I'd previosuly checked. Identified where I went wrong and took notes for future.
+
+### 24 Oct 2023
+* *4 hours* Researched for qualitative analysis using a tip I'd seen in a previously read paper - and managed to find a substantial amount to read through and add to the library.
+* *1 hour* Changed introduction to bullet point and sectioned it out more. Took out the persuasive undertone.
+
+### 26 Oct 2023
+* *1 hour* Wrote my meeting agenda and then had meeting with Alistair.
+
+### 27 Oct 2023
+* *3 hours* Creating a very normal and casual post-it note wall with every resource plus points made that i have saved in my library on the topic, categorized by key themes (Goal, Ethics, Implementation, Development and Issues with LA research).
+* *0.5 hours* Finally figured out how to update this file, which is what I've been doing by figuring out my notes on Notion as well as my Google Calender! I forgot that Github lets you edit online repositories on their site!!!! I am but a silly little goose.
+
+  
