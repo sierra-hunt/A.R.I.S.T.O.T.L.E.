@@ -118,4 +118,13 @@
 * *3 hours* Creating a very normal and casual post-it note wall with every resource plus points made that i have saved in my library on the topic, categorized by key themes (Goal, Ethics, Implementation, Development and Issues with LA research).
 * *0.5 hours* Finally figured out how to update this file, which is what I've been doing by figuring out my notes on Notion as well as my Google Calender! I forgot that Github lets you edit online repositories on their site!!!! I am but a silly little goose.
 
+### 28 Oct 2023
+* *1 hour* Finished off post-it wall and took a good long hard look at it.
+* *0.5 hour* Started writing up literature review flow following post-it notes.
+
+### 1 Nov 2023
+* *5 hours* Wrote up literature review in Bibliography.
+
+### 3 Nov 2023 
+* *1 hour* Prepared for supervisor meeting and had it.
   
