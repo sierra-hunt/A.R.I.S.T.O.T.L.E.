@@ -127,4 +127,23 @@
 
 ### 3 Nov 2023 
 * *1 hour* Prepared for supervisor meeting and had it.
+
+### 6 Nov 2023 
+* *3 hours* Read through various UofG policies saved in Research and took thorough notes.
+
+### 7 Nov 2023
+* *2 hours* Created new post-it note wall for structure in terms of qualitative and quantitative, then wrote up initial prompts to follow through on.
+
+### 9 Nov 2023
+* *1 hour* Prepared for meeting and had it.
+
+### 13 Nov 2023
+* *1 hour* Experimented with OULAD dataset and created some data views to potentially show in wireframes.
+  
+### 14 Nov 2023
+* *1 hour* Found cool paper written by UofG staff, read it and notated whilst hunting for more information on LA within UofG.
+* *1 hour* Researched into different analytics for qualitative, withdrew bias and seeded my prompts also for qualitative.
+  
+### 15 Nov 2023
+* *3 hours* Organized dates to meet tomorrow for a few of my interviews, read up on ethics guidelines and did the paperwork for it - created consent sheet. Sent ethics sheet over to Alistair for approval.
   
