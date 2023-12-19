@@ -146,4 +146,33 @@
   
 ### 15 Nov 2023
 * *3 hours* Organized dates to meet tomorrow for a few of my interviews, read up on ethics guidelines and did the paperwork for it - created consent sheet. Sent ethics sheet over to Alistair for approval.
+
+### 16 Nov 2023
+* *1 hour* Planned and had meeting with Alistair.
+* *0.5 hours* Organized 5 interviews. 
+  
+### 18 Nov 2023
+* *4 hours* Completed and transcribed Interview #1.
+
+### 19 Nov 2023
+* *5 hours* Interview #2 and #3 completed and transcribed.
+
+### 21 Nov 2023
+* *6.5 hours* Interviews #4 and #5 completed and transcribed. Emailed potential future interviewees.
+
+### 23 Nov 2023
+* *1.5 hours* Prepare for meeting and have it with Alistair.
+
+### 29 Nov 2023
+* *0.5 hours* Cancelled interview #6. Fallen ill.
+
+### 11 Dec 2023
+* *1.5 hours* Worked on timeline for next year and midway project report. Sprint period will have to be moved to start of January.
+
+### 14 Dec 2023
+* *1 hour* Meeting with Alistair and documentation.
+
+### 19 Dec 2023
+* *0.5 hours* Updated documentation - meeting minutes and this. Need to figure out a system for reminding me to do both tasks that actually works.
+
   
