@@ -11,9 +11,9 @@
 
 %==============================================================================
 %% METADATA
-\title{Level 4 Project Report Template}
-\author{John H. Williamson}
-\date{September 14, 2018}
+\title{Work in Progress Title: Investigations in Learning Analytics}
+\author{Elisabet Tammjarv}
+\date{September ??, 2024}
 
 \maketitle
 
@@ -39,8 +39,8 @@
 % Please note that you are under no obligation to sign 
 % this declaration, but doing so would help future students.
 %
-%\def\consentname {My Name} % your full name
-%\def\consentdate {20 March 2018} % the date you agree
+\def\consentname {Elisabet Tammjarv} % your full name
+\def\consentdate {23 December 2023} % the date you agree
 %
 \educationalconsent
 
@@ -80,93 +80,81 @@
 % reset page numbering. Don't remove this!
 \pagenumbering{arabic} 
 
+\section{Description of Problem}
 
-Why should the reader care about what are you doing and what are you actually doing?
-\section{Guidance}
+\subsection{Overview of Learning Analytics}
+Learning analytics (LA) is broadly defined as the measurement, collection, analysis, and reporting of data about learners and learning environments - with the main purpose consisting of gaining an insight into the interactions between learners and the systems they participate in \citep{Papamitsiou2014InternationalEvidence}. LA encompasses a plethora of conceptual variations with its multi-disciplinary approach that ties together areas of education, psychology, computing and data science \citep{Ifenthaler2020UtilisingReview}. In line with our student-centred philosophy for LA (discussed in section !!!!), we will be focusing on applications of LA which operate on a strictly institutional level. 
 
-\textbf{Motivate} first, then state the general problem clearly. 
+*******ADD CATEGORIES OF LA USE CASES HERE.*********
 
-\section{Writing guidance}
-\subsection{Who is the reader?}
+\section{Motivation}
 
-This is the key question for any writing. Your reader:
 
-\begin{itemize}
-    \item
-    is a trained computer scientist: \emph{don't explain basics}.
-    \item
-    has limited time: \emph{keep on topic}.
-    \item
-    has no idea why anyone would want to do this: \emph{motivate clearly}
-    \item
-    might not know \emph{anything} about your project in particular:
-    \emph{explain your project}.
-    \item
-    but might know precise details and check them: \emph{be precise and
-    strive for accuracy.}
-    \item
-    doesn't know or care about you: \emph{personal discussions are
-    irrelevant}.
-\end{itemize}
+\section{Aim}
 
-Remember, you will be marked by your supervisor and one or more members
-of staff. You might also have your project read by a prize-awarding
-committee or possibly a future employer. Bear that in mind.
 
-\subsection{References and style guides}
-There are many style guides on good English writing. You don't need to
-read these, but they will improve how you write.
-
-\begin{itemize}
-    \item
-    \emph{How to write a great research paper} \cite{Pey17} (\textbf{recommended}, even though you aren't writing a research paper)
-    \item
-    \emph{How to Write with Style} \cite{Von80}. Short and easy to read. Available online.
-    \item
-    \emph{Style: The Basics of Clarity and Grace} \cite{Wil09} A very popular modern English style guide.
-    \item
-    \emph{Politics and the English Language} \cite{Orw68}  A famous essay on effective, clear writing in English.
-    \item
-    \emph{The Elements of Style} \cite{StrWhi07} Outdated, and American, but a classic.
-    \item
-    \emph{The Sense of Style} \cite{Pin15} Excellent, though quite in-depth.
-\end{itemize}
-
-\subsubsection{Citation styles}
-
-\begin{itemize}
-\item If you are referring to a reference as a noun, then cite it as: ``\citet{Orw68} discusses the role of language in political thought.''
-\item If you are referring implicitly to references, use: ``There are many good books on writing \citep{Orw68, Wil09, Pin15}.''
-\end{itemize}
-
-There is a complete guide on good citation practice by Peter Coxhead available here: \url{http://www.cs.bham.ac.uk/~pxc/refs/index.html}. 
-If you are unsure about how to cite online sources, please see this guide: \url{https://student.unsw.edu.au/how-do-i-cite-electronic-sources}.
-
-\subsection{Plagiarism warning}
-
-\begin{highlight_title}{WARNING}
     
-    If you include material from other sources without full and correct attribution, you are commiting plagiarism. The penalties for plagiarism are severe.
-    Quote any included text and cite it correctly. Cite all images, figures, etc. clearly in the caption of the figure.
-\end{highlight_title}
-
 
 %==================================================================================================================================
 \chapter{Background}
 What did other people do, and how is it relevant to what you want to do?
-\section{Guidance}
-\begin{itemize}    
-    \item
-      Don't give a laundry list of references.
-    \item
-      Tie everything you say to your problem.
-    \item
-      Present an argument.
-    \item Think critically; weigh up the contribution of the background and put it in context.    
-    \item
-      \textbf{Don't write a tutorial}; provide background and cite
-      references for further information.
-\end{itemize}
+\section{Research Concerns for Learning Analytics}
+First, a short disclaimer. The majority of papers written on LA lack an underlying theoretical framework, resulting in an inherent lack of ability to connect findings with meaningful pedagogical guidance \citep{Baek2023Educational2019, Banihashem2019InvestigationAnalytics}. The field also suffers from a lack of rigorous, large-scale evidence for the effectiveness of LA implementations in learning environments \citep{Ifenthaler2020UtilisingReview}. The use of LA to provide evidence of detecting various constructs relevant to learners and education suffers from a lack of replicability, in part due to the large degree of freedom in research for decisions made regarding content analysis as well as the highly contextual nature of the data itself \citep{Kitto_Manly_Ferguson_Poquet_2023}. The often sensitive nature of datasets for LA leads to a restrictive model wherein companies and research groups with access to larger, closed datasets tend to excel - thereby narrowing the reproducibility of results within the field \citep{Kitto_Manly_Ferguson_Poquet_2023}. With these doubts in mind, I have carefully reviewed my research for this literature review and organised the key findings into four overarching categories;- deviance within underlying motivations for the implementation of LA projects, deviance within developmental methods undertaken, deviance within the implementation of the projects, and finally the interplay of ethics and law in LA. 
+
+
+\section{Literature Review}
+\subsection{Underlying Motivations}
+The underlying motivations behind why projects with LA have been created affect everything from the resilience and usefulness of the system down to how it is interpreted by the users themselves. The use of LA to identify learners who are at risk of dropping out can directly increase profits for an institution, and opting for data-driven optimization rather than expert oversight is often viewed as a cost-cutting measure \citep{Yen-TingLiuLearningPoint}. This can alienate educators from their practices as well as their students. Predictive LA, in particular, has been viewed as a form of behaviourism, with learners' behaviour being influenced by institutes that claim to have their best interests at heart \citep{Yen-TingLiuLearningPoint}. The unfortunate reality of cases where LA has gone awry is that institutions are often too large, complicated and teeming with other projects to manage each high-risk case individually - and when there is no clear-cut trail of responsibility, the blame is put on the implementations, and use of,
+LA itself. LA has been heading in a similar direction as AI and Big Data faddism, grasping the attention of institutes as an easy solution for dealing with otherwise abstract and difficult problems \citep{BeerThreeAustralia}. 
+
+
+\subsection{Developmental Methods}
+\subsubsection{Stakeholders}
+
+Most LA projects are developed with an educator-centric institutional view, with learners relegated to acting as passive end-users \citep{Joseph-Richard2023WhichPerspective}. On the flip side, learner-centric, learner-led LA projects are often performative in nature, with strong emphasis placed on the outcome of learners' educational paths over the learning process itself; this simultaneously discourages lower self-efficiency learners and encourages complacency within high-achieving students \citep{Yen-TingLiuLearningPoint}. \citet{BeerThreeAustralia} explore how the development of Learning Analytics (LA) systems with a focus on educator-centric, institutional views can be influenced by the diverse ways educators are involved in the process. Three approaches are discussed:
+
+1. Top-Down: This involves forming and considering a project at the institutional level with input from a small group before implementing it institution-wide.
+
+2. In-Group: Here, a project is initiated and utilized by a passionate group of educators who may not be aware of the significant differences between the in-group and the majority of educators in the institute. 
+
+3. Bricolage: In this approach, a project is developed by first understanding the existing resources and working with educators to gain insights into their lived experiences. 
+
+The paper ends by mentioning a mixture of elements in all three approaches is the best, despite the top-down approach being the existing institutional norm.
+
+Another important factor for us to consider is the clear divergences in stakeholders' perspectives over bias and equity reflected by the institutional position they hold, i.e. learners have comparatively limited awareness of details surrounding LA implementations but still express concerns over the use of their data - whilst few educators and administrators see students as active and trustworthy partners in managing their data \citep{Heiser2023AmplifyingEducation}. \citet{Heiser2023AmplifyingEducation} further discusses how the fragmentation that can occur amongst stakeholders can be mitigated, with a focus on centring the values of different stakeholder groups whilst acknowledging intersections and power dynamics between groups for authentic inclusion. 
+
+\subsubsection{Course Structure}
+Differences present in course structure can make or break the usefulness of LA projects \citep{Azevedo2017LearningLearning, Barberà_Gregori_Galvan_Fernandez_Zhang_Fernández-Navarro_2017, Iglesias-Pradas2015AssessingCompetencies}. To put this into perspective, a course that focuses more on in-person learning elements, such as seminars and group projects, will result in far less available data to analyze than a course that has weekly online submissions for coursework as well as quizzes. At-risk learners may not be picked up on until it is far too late. Educators with a preference for tools outside of the standard for their institute, as well as constantly changing API for third-party software that allows data collection, both pose issues for the resilience of LA projects. Maintenance can be quite the pickle. Providing up-to-date documentation of the project with malleability and capacity for complexity in data coded in is key for the evolution and adaption of LA projects, as tools used by educators as well as underlying educational theory are continuously advanced. 
+
+
+As \citet{Zemsky_2014} describes, the curriculum in institutional higher education is often disconnected from its true goal of preparing post-secondary learners for the future, due to a miscellany of courses taught by educators passionate about their specific subject for which learners often settle for what is convenient. True education is substantially more than the sum of its parts - and LA projects often fail to capture that nuance. 
+
+**************ADD IN STUFF HERE :) FROM POST-IT-NOTES********************
+
+\subsection{Implementation}
+\subsubsection{Trust}
+Perhaps the most crucial factor to consider for a successful implementation of an LA project is its trustworthiness. Third-party LA projects suffer from low levels of trust due to concerns around the privacy of data, use of outdated materials, and lack of governance in the aforementioned data \citep{ShannanAlzahrani2023DoStudy}. In-house LA projects suffer from low levels of trust due to missing transparency regarding the data use, viable project usefulness, and lack of belief in the competence of the institute \citep{ShannanAlzahrani2023DoStudy}. Analytics literacy is a key component in the belief of the project's usefulness, as users can easily misunderstand the use cases of the project and the limitations involved \citep{Feldstein_2017}. \citet{Papamitsiou2014InternationalEvidence} conducted SWOT analysis of LA projects shows human judgement as a major weakness of implemented LA projects, suggesting that the average user may have to acquire a specific skill set to be able to interpret results shown correctly. The complexity of intricate LA projects can result in a lack of generality for the results and an increased potential for the misclassification of patterns \citep{Papamitsiou2014InternationalEvidence}. These challenges contribute to conflicting findings regarding trust in the implementation of LA systems \citep{Papamitsiou2014InternationalEvidence}.
+
+\subsubsection{Relationship Changes}
+There are pedagogical concerns surrounding the transformation of student-educator, student-tutor, and student-course content relations due to LA and the use of technology for education in general \citep{Yen-TingLiuLearningPoint, Tempelaar2017AcceptedAssessment, Agudo-Peregrina2014CanLearning}. These concerns arise from their intrusion into individuals' private lives, as the boundaries between learning spaces and homes \citep{Baek2023Educational2019}. Another cause for concern is when the holistic nature of learning is not taken into account; perceived risk within a course is viewed as an independent variable, with dependent variables factors such as lecture attendance, active learning, motivation, prior academic performance and social connection \citep{Ifenthaler2020UtilisingReview}. This lack of contextualization within the bigger picture is exactly why during the COVID-19 pandemic measures of interaction were recorded and flagged as factors for poor performance across multiple institutes, for students to ‘fix’, without addressing the damaging effects that isolation in lockdown had on members of the student population. As a direct result of this breach of common sense, many educators critique LA by focusing on the importance of human presence \citep{MerikkoTechnologicalProcess}.
+
+\subsubsection{Self Regulation}
+Human presence is shown to be a significant factor for learners' success; with self-efficiency in social networking positively correlating to active academic help-seeking as well as an increased social presence within the learning environment \citep{Keshavarzi2023MediatingEnvironments}. Similarly, learners self-belief in their academic abilities positively correlates with their use of online services to help comprehend, organize and finalize their assessments \citep{Keshavarzi2023MediatingEnvironments}. The bridge between both of these skills, self-regulation, can be supported by LA projects taking the guise of pedagogical agents; scaffolding the responsibility and the skill set required for self-regulation from the LA project onto the learner themselves \citep{MerikkoTechnologicalProcess}. This must be done with careful consideration, demonstrated by the use of structured learning diaries by \citet{MerikkoTechnologicalProcess} for their LA project; whilst the diaries proved to successfully capture cognitive, emotional and motivational aspects of the self-regulation journey of learners, it harmed the self-regulation habits of a sub-group of students. When planning LA projects with the capacity to intervene in the self-regulation of learners, all three phases of self-regulation must be carefully taken into account; planning, performing and reflecting \citep{Heikkinen123SupportingReview}. 
+
+\subsubsection{Behaviourism}
+Historically self-regulation, alongside other socio-emotional skills, was thought of as separate from personality traits; personality traits were fixed and socio-emotional skills could be changed with intervention. This is now considered inaccurate. Personality psychology can be used to accurately predict learners' educational outcomes, inform the basis of educational interventions and overall support academic development in learners \citep{Jach123HowResearch}. Learners personality traits can be used as target outcomes for students on their educational path, i.e. for a student struggling with coursework due to their first-year new place anxiety, working on lowering neuroticism (potential for anxiety and depression) and increasing agreeableness (potential for pro-social attitudes and behaviours) could be beneficial \citep{Jach123HowResearch}. If utilized within a LA project, personality trait tracking should be done with an extreme degree of caution, transparency to learners, and expert advice from the psychology field, since it is behaviourism; without the right accompanying elements, its usage does not focus on learners cognitive skills, carries limited application towards complex learning, does not care for individualization and increases potential for negative emotional impact by reinforcing the presence of traits that the learner sees as undesirable \citep{Tprestianni_2023}.
+
+\subsubsection{Learner Expectations}
+************A LOT <3333****************
+
+\subsection{Ethics and Law}
+\subsubsection{Data Gathering}
+\subsubsection{Borderline Creep Factor}
+\subsubsection{Responsibility}
+
+
+\section{Summary}
+
 
 %==================================================================================================================================
 \chapter{Analysis/Requirements}
