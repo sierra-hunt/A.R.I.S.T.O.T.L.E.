@@ -175,4 +175,11 @@
 ### 19 Dec 2023
 * *0.5 hours* Updated documentation - meeting minutes and this. Need to figure out a system for reminding me to do both tasks that actually works.
 
+### 26 Dec 2023
+* *4 hours* References sorted out to the best of my ability.
+* *1 hour* Fixing broken visual studio. Finally cloned project in!
+
+### 15 January 2024
+* *8 hours* Researching how to write formally and re-writing parts of dissertation to Overleaf project. Still not confident in writing. Potential for masterclass visit?
+
   
