@@ -179,7 +179,14 @@
 * *4 hours* References sorted out to the best of my ability.
 * *1 hour* Fixing broken visual studio. Finally cloned project in!
 
+### 14 January 2024
+* *8 hours* Researching how to write formally and re-writing parts of dissertation to Overleaf project. Still not confident in writing. Potential for masterclass visit?  
+
 ### 15 January 2024
-* *8 hours* Researching how to write formally and re-writing parts of dissertation to Overleaf project. Still not confident in writing. Potential for masterclass visit?
+* *1 hour* Supervisor meeting
+
+### 17 January 2024
+* *2 hours* Added to dissertation, researched on theoretical educational frameworks.
+  
 
   
