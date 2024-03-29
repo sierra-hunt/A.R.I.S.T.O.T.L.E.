@@ -6,26 +6,37 @@
 %
 % put any additional packages here
 %
-
+\usepackage{booktabs}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{dirtytalk}
+\usepackage{caption}
+\usepackage{pdfpages}
+\graphicspath{ {./images/} }
 \begin{document}
 
 %==============================================================================
 %% METADATA
-\title{Work in Progress Title: Investigations in Learning Analytics}
+\title{Investigations in Learning Analytics}
 \author{Elisabet Tammjarv}
-\date{September ??, 2024}
+\date{March 23, 2024}
 
 \maketitle
 
 %==============================================================================
 %% ABSTRACT
 \begin{abstract}
-    Every abstract follows a similar pattern. Motivate; set aims; describe work; explain results.
-    \vskip 0.5em
-    ``XYZ is bad. This project investigated ABC to determine if it was better. 
-    ABC used XXX and YYY to implement ZZZ. This is particularly interesting as XXX and YYY have
-    never been used together. It was found that  
-    ABC was 20\% better than XYZ, though it caused rabies in half of subjects.''
+
+In response to the growing demand for personalized learning experiences driven by the adoption of a constructivist framework in higher education, this research endeavors to deliver key insights on the design and implementation of a comprehensive institution-wide Learning Analytics (LA) system. Grounded in Zimmerman and Moylan's theory of self-regulation, the primary aim of the system is to support learners across various phases of their educational journey.
+
+Challenges in research and implementation of LA projects are identified and discussed through an extensive literature review. We utilize a novel research methodology that utilizes agile practices and participatory design principles primarily as an information-gathering device to examine perceived insights of a select sub-group of the student population through a connectivist lens. The secondary aim of this research methodology is developing a prototype student interface for an institute-wide LA system. 
+
+Ultimately, the findings of this research underscore the significance of building a positive and woke culture in higher educational institutes surrounding learning analytics, and highlight the potential impact analytics will have on learner-educator relationships. By fostering transparency, empowerment, and connectivity within all parts of the educational ecosystem, the study aims to contribute valuable insights into the design and implementation of effective LA systems that support learner success and academic growth. 
+
+Future research should focus on implementing and garnering insights into long-term utilization of the prototype developed - with particular emphasis placed on adaptability to account for the changing landscape of ethics and law surrounding analytics.
+    
+
+    
 \end{abstract}
 
 %==============================================================================
@@ -80,434 +91,748 @@
 % reset page numbering. Don't remove this!
 \pagenumbering{arabic} 
 
-\section{Description of Problem}
+Learning analytics (LA) is broadly defined as the measurement, collection, analysis, and reporting of data about learners and learning environments - with the main purpose consisting of gaining an insight into the interactions between learners and the systems they participate in \citep{Papamitsiou2014InternationalEvidence}. LA encompasses a plethora of conceptual variations with its multi-disciplinary approach that ties together areas of education, psychology, computing and data science \citep{Ifenthaler2020UtilisingReview}.  
 
-\subsection{Overview of Learning Analytics}
-Learning analytics (LA) is broadly defined as the measurement, collection, analysis, and reporting of data about learners and learning environments - with the main purpose consisting of gaining an insight into the interactions between learners and the systems they participate in \citep{Papamitsiou2014InternationalEvidence}. LA encompasses a plethora of conceptual variations with its multi-disciplinary approach that ties together areas of education, psychology, computing and data science \citep{Ifenthaler2020UtilisingReview}. In line with our student-centred philosophy for LA (discussed in section !!!!), we will be focusing on applications of LA which operate on a strictly institutional level. 
+Within the institute that this study takes place, University of Glasgow, data that has been already utilized for learning analytics consists of assessment data (granular and aggregated), measures of engagement (including attendance, assignment completion, student contributions to discussion, virtual learning environment usage, Moodle statistics, online discussion contributions, measures of visits to on-campus study spaces, use of university digital network, engagement with student learning development), measures of self-assessment through reflective tools and data specially collected for learning analytics, such as focus group data \footnote{https://www.gla.ac.uk/myglasgow/apg/policies/regulationsandguidelines/learninganalyticspolicy/, accessed November 20th 2024}. 
 
-*******ADD CATEGORIES OF LA USE CASES HERE.*********
 
 \section{Motivation}
 
+The transition from general education to higher involves a lot of conceptual schema assimilation. Students are expected to have an independent style of learning and take responsibility - particularly when it comes to their self-regulation skills. Most of the student body will also have commitments outside of their education, and cannot devout as much if their mental resources and time to the study of their own study - meta education - as is required.
+
+Effective use of LA can bridge this gap by dissecting the learning path for students and letting them understand their own development; with regards to prior levels attained, their place in their cohort, the skill sets they leveraged and the concepts they assimilated successfully/unsuccessfully. Gaps in knowledge can be effectively picked up on. Motivational factors further reinforced. Appropriately designed and maintained LA systems have the potential to completely change how students navigate their own educational path.
 
 \section{Aim}
+
+The current trending pedagogical framework utilized in higher educational institutes in the west is student-centered constructivism - this is centered around active learning, which develops students autonomy and leads to extended control over their own constructions of mental schemata \citep{o2022constructivism}. There are drawbacks to this approach; underlying knowledge in curriculum is viewed as easily transferable across alternate modes of teaching, and disciplinary differences are neglected to the back burner as a trade-off. Differences across schemata due to underlying mis-applications of prior knowledge are particularly difficult to pin-point. 
+
+In this study we will explore the transferal of knowledge from institute to learner through the lens of connectivism, which incorporates the key elements of constructivist theory along with the principles of networked learning - where learning occurs as a by-product of making connections and navigating information networks. This is particularly aptly suited to LA as machine learning makes leaps and strides in the field of mapping out knowledge bases. Particular emphasis has been placed on analyzing how students form and change their own narratives during discussions surrounding the use of LA. 
+
+Within the greater bank of prior research done on LA implementations that are institute-wide, the underlying motivations of the institute shape the culture surrounding the implementation. The use of the moniker LA is widely regarded as a buzzword, bringing a black box effect where the lack of clarity is not expanded upon - leaving the actual end goals of the system unclear. Success is often defined numerically within the field -  improvements in engagement reflected as an increase in page views, improvements in understanding of the material as higher cohort grade results. Whilst this is satisfactory for a cause-and-effect outcome, the nature of learning is often far more illusive. Within the bank of prior research done in the field, there appears to be limited thought given to the ever-evolving nature of pedagogical frameworks, and how educational narrative shape the interactions of students and staff with implemented LA projects. 
+
+And thus, we have our three areas of research to focus on;
+
+\begin{itemize}
+    \item What insights can we garner from past research and current research with students for an institute-wide LA implementation?
+    \item How can institutes best navigate the complex ethical and legal playing field surrounding analytics?
+    \item What are the major theoretical factors involved in a successful developmental period and implementation of a LA system? 
+    
+\end{itemize}
+
+
+Our first step will be conducting a literature review that explores these territory of LA implementations and takes note of particular concerns. A sub-group of the student population (n=5) will be used for gaining insights in interviews thorough our study. The initial interview is conducted to outline a frame of reference for students current knowledge of, experiences with and expectations for the usage of learning analytics within the institute, as well as identify theoretical factors to pay attention to and establish a set of goals for an institute-wide LA prototype. 
+
+In line with Pandero 2017’s work on LA for self-regulation, and the overall ideals from utilizing constructivism and connectivism as the key underpining frameworks for this study, the prototype created through our process will exist as a student interface of an institute-wide LA system to aid in supporting various aspects of self-regulation.
+
+This prototype will be comprised of components that are created and developed through further interviews utilizing participatory deign principles, with the final prototype launched online for the end of project evaluation. The prototype primarily serves as a tool to track the sub-group students' narratives surrounding learning analytics, however a final round of evaluations has been conducted on a larger sub-group of the student body to see how the end results aligns with the greater student population (n=????). 
 
 
     
 
-%==================================================================================================================================
+%============================================================================================)======================================
 \chapter{Background}
-What did other people do, and how is it relevant to what you want to do?
+
 \section{Research Concerns for Learning Analytics}
-First, a short disclaimer. The majority of papers written on LA lack an underlying theoretical framework, resulting in an inherent lack of ability to connect findings with meaningful pedagogical guidance \citep{Baek2023Educational2019, Banihashem2019InvestigationAnalytics, BuchnerPersonalisedModel}. The field also suffers from a lack of rigorous, large-scale evidence for the effectiveness of LA implementations in learning environments \citep{Ifenthaler2020UtilisingReview}. The use of LA to provide evidence of detecting various constructs relevant to learners and education suffers from a lack of replicability, in part due to the large degree of freedom in research for decisions made regarding content analysis as well as the highly contextual nature of the data itself \citep{Kitto_Manly_Ferguson_Poquet_2023}. The often sensitive nature of datasets for LA leads to a restrictive model wherein companies and research groups with access to larger, closed datasets tend to excel - thereby narrowing the reproducibility of results within the field \citep{Kitto_Manly_Ferguson_Poquet_2023}. With these doubts in mind, I have carefully reviewed my research for this literature review and organised the key findings into four overarching categories;- deviance within underlying motivations for the implementation of LA projects, deviance within developmental methods undertaken, deviance within the implementation of the projects, and finally the interplay of ethics and law in LA. 
+First, a short disclaimer. The majority of papers written on LA lack an underlying theoretical framework, resulting in an inherent lack of ability to connect findings with meaningful pedagogical guidance \citep{Baek2023Educational2019, Banihashem2019InvestigationAnalytics, BuchnerPersonalisedModel}. The field also suffers from a lack of rigorous, large-scale evidence for the effectiveness of LA implementations in learning environments \citep{Ifenthaler2020UtilisingReview}. The use of LA to provide evidence of detecting various constructs relevant to learners and education suffers from a lack of replicability, in part due to the large degree of freedom in research for decisions made regarding content analysis as well as the highly contextual nature of the data itself \citep{Kitto_Manly_Ferguson_Poquet_2023}. The often sensitive nature of datasets for LA leads to a restrictive model wherein companies and research groups with access to larger, closed datasets tend to excel - thereby narrowing the reproducibility of results within the field \citep{Kitto_Manly_Ferguson_Poquet_2023}. 
+
+With these doubts in mind, we have carefully organised the key findings of the literature review into four overarching categories;- deviance within underlying motivations for the implementation of LA projects, deviance within developmental methods undertaken, deviance within the implementation of the projects, and finally an account of ethical issues surrounding LA. 
 
 
 \section{Literature Review}
 \subsection{Underlying Motivations}
-The underlying motivations behind why projects with LA have been created affect everything from the resilience and usefulness of the system down to how it is interpreted by the users themselves. The use of LA to identify learners who are at risk of dropping out can directly increase profits for an institution, and opting for data-driven optimization rather than expert oversight is often viewed as a cost-cutting measure \citep{Yen-TingLiuLearningPoint}. This can alienate educators from their practices as well as their students. Predictive LA, in particular, has been viewed as a form of behaviourism, with learners' behaviour being influenced by institutes that claim to have their best interests at heart \citep{Yen-TingLiuLearningPoint}. The unfortunate reality of cases where LA has gone awry is that institutions are often too large, complicated and teeming with other projects to manage each high-risk case individually - and when there is no clear-cut trail of responsibility, the blame is put on the implementations, and use of,
-LA itself. LA has been heading in a similar direction as AI and Big Data faddism, grasping the attention of institutes as an easy solution for dealing with otherwise abstract and difficult problems \citep{BeerThreeAustralia}. 
+The underlying motivations behind why projects with LA have been created affect everything from the resilience and usefulness of the system down to how it is interpreted by the users themselves. The use of LA to identify learners who are at risk of dropping out can directly increase profits for an institution, and opting for data-driven optimization rather than expert oversight is often viewed as a cost-cutting measure \citep{Yen-TingLiuLearningPoint}. This can alienate educators from their practices as well as their students. 
+
+Predictive LA, in particular, has been viewed as a form of behaviourism, with learners' behaviour being influenced by institutes that claim to have their best interests at heart \citep{Yen-TingLiuLearningPoint}. The unfortunate reality of cases where LA has gone awry is that institutions are often too large, complicated and teeming with other projects to manage each high-risk case individually - and when there is no clear-cut trail of responsibility, the blame is put on the implementations, and use of, LA itself. LA has been heading in a similar direction as AI and Big Data fad-ism, grasping the attention of institutes as an easy solution for dealing with otherwise abstract and difficult problems \citep{BeerThreeAustralia}. 
 
 
 \subsection{Developmental Methods}
 \subsubsection{Stakeholders}
+\hfill
 
 Most LA projects are developed with an educator-centric institutional view, with learners relegated to acting as passive end-users \citep{Joseph-Richard2023WhichPerspective}. On the flip side, learner-centric, learner-led LA projects are often performative in nature, with strong emphasis placed on the outcome of learners' educational paths over the learning process itself; this simultaneously discourages lower self-efficiency learners and encourages complacency within high-achieving students \citep{Yen-TingLiuLearningPoint}. \citet{BeerThreeAustralia} explore how the development of Learning Analytics (LA) systems with a focus on educator-centric, institutional views can be influenced by the diverse ways educators are involved in the process. Three approaches are discussed:
 
-1. Top-Down: This involves forming and considering a project at the institutional level with input from a small group before implementing it institution-wide.
+Top-Down: This involves forming and considering a project at the institutional level with input from a small group before implementing it institution-wide.
 
-2. In-Group: Here, a project is initiated and utilized by a passionate group of educators who may not be aware of the significant differences between the in-group and the majority of educators in the institute. 
+In-Group: Here, a project is initiated and utilized by a passionate group of educators who may not be aware of the significant differences between the in-group and the majority of educators in the institute. 
 
-3. Bricolage: In this approach, a project is developed by first understanding the existing resources and working with educators to gain insights into their lived experiences. 
+Bricolage: In this approach, a project is developed by first understanding the existing resources and working with educators to gain insights into their lived experiences. 
 
 The paper ends by mentioning a mixture of elements in all three approaches is the best, despite the top-down approach being the existing institutional norm.
 
-Another important factor for us to consider is the clear divergences in stakeholders' perspectives over bias and equity reflected by the institutional position they hold, i.e. learners have comparatively limited awareness of details surrounding LA implementations but still express concerns over the use of their data - whilst few educators and administrators see students as active and trustworthy partners in managing their data \citep{Heiser2023AmplifyingEducation}. \citet{Heiser2023AmplifyingEducation} further discusses how the fragmentation that can occur amongst stakeholders can be mitigated, with a focus on centring the values of different stakeholder groups whilst acknowledging intersections and power dynamics between groups for authentic inclusion. 
+We must also clear divergences in stakeholders' perspectives over bias and equity reflected by the institutional position they hold, i.e. learners have comparatively limited awareness of details surrounding LA implementations but still express concerns over the use of their data - whilst few educators and administrators see students as active and trustworthy partners in managing their data \citep{Heiser2023AmplifyingEducation}. \citet{Heiser2023AmplifyingEducation} further discusses how the fragmentation that can occur amongst stakeholders can be mitigated, with a focus on centring the values of different stakeholder groups whilst acknowledging intersections and power dynamics between groups for authentic inclusion. 
 
 \subsubsection{Course Structure}
-Differences present in course structure can make or break the usefulness of LA projects \citep{Azevedo2017LearningLearning, Barberà_Gregori_Galvan_Fernandez_Zhang_Fernández-Navarro_2017, Iglesias-Pradas2015AssessingCompetencies}. To put this into perspective, a course that focuses more on in-person learning elements, such as seminars and group projects, will result in far less available data to analyze than a course that has weekly online submissions for coursework as well as quizzes. At-risk learners may not be picked up on until it is far too late. Educators with a preference for tools outside of the standard for their institute, as well as constantly changing API for third-party software that allows data collection, both pose issues for the resilience of LA projects. Maintenance can be quite the pickle. Providing up-to-date documentation of the project with malleability and capacity for complexity in data coded in is key for the evolution and adaption of LA projects, as tools used by educators, as well as underlying educational theory, are continuously advanced. As \citet{Zemsky_2014} describes, the curriculum in institutional higher education is often disconnected from its true goal of preparing post-secondary learners for the future, due to a miscellany of courses taught by educators passionate about their specific subject for which learners often settle for what is convenient. True education is substantially more than the sum of its parts - and LA projects often fail to capture that nuance. 
+\hfill
+
+Differences present in course structure can make or break the usefulness of LA projects \citep{Azevedo2017LearningLearning, Barberà_Gregori_Galvan_Fernandez_Zhang_Fernández-Navarro_2017, Iglesias-Pradas2015AssessingCompetencies}. To put this into perspective, a course that focuses more on in-person learning elements, such as seminars and group projects, will result in far less available data to analyze than a course that has weekly online submissions for coursework as well as quizzes. At-risk learners may not be picked up on until it is far too late. Educators with a preference for tools outside of the standard for their institute, as well as constantly changing API for third-party software that allows data collection, both pose issues for the resilience of LA projects. 
+
+Maintenance can be quite the issue. Providing up-to-date documentation of the project with malleability and capacity for complexity in data coded in is key for the evolution and adaption of LA projects, as tools used by educators, as well as underlying educational theory, are continuously advanced. As \citet{Zemsky_2014} describes, the curriculum in institutional higher education is often disconnected from its true goal of preparing post-secondary learners for the future, due to a miscellany of courses taught by educators passionate about their specific subject for which learners often settle for what is convenient. True education is substantially more than the sum of its parts - and LA projects can often fail to capture that nuance. 
 
 \subsubsection{Learner Expectations}
-There are numerous support features that learners expect from LA; most of which can be sorted into the three general phases of self-regulation \citep{Panadero_2017, Dwiarie2023PersonalizedAnalytics}
+\hfill
 
-\section*{Forethought Phase:}
-
-\begin{enumerate}
-    \item \textbf{Understanding the Capital T Task:}
-        \begin{itemize}
-            \item General learning path visualization.
-            \item End goal visualization.
-            \item Task instruction visualization.
-            \item Output criteria visualization.
-        \end{itemize}
-        
-    \item \textbf{Motivation Exploration:}
-        \begin{itemize}
-            \item Personalized recommendation features based on learning interest, learners initial level of capabilities, outcome expectancies, and goal orientation for the future career journey.
-        \end{itemize}
-\end{enumerate}
-
-\section*{Performance Phase:}
-
-\begin{enumerate}
-    \item \textbf{Time Management and Task Challenges:}
-        \begin{itemize}
-            \item Information for time prioritization.
-            \item Prompts to break down goals.
-            \item Reminders for the target.
-        \end{itemize}
-        
-    \item \textbf{Tracking Learning Activities and Progress:}
-        \begin{itemize}
-            \item Recording and tracking features for:
-                \begin{itemize}
-                    \item Learning activities (e.g., time spent, active rate, completion status).
-                    \item Progress of learning goals.
-                    \item Observation of peers' learning activities progress.
-                \end{itemize}
-        \end{itemize}
-        
-    \item \textbf{Efficient Access to Information:}
-        \begin{itemize}
-            \item Traces to highlight information.
-            \item Recommendations based on:
-                \begin{itemize}
-                    \item Interest keywords.
-                    \item Popularity.
-                \end{itemize}
-        \end{itemize}
-        
-    \item \textbf{Help-Seeking for Social Support:}
-        \begin{itemize}
-            \item Recommendations to connect with resourceful experts or peers.
-            \item Functions to support psychological safety (e.g., anonymous options).
-        \end{itemize}
-        
-    \item \textbf{Regulating Emotions and Motivation:}
-        \begin{itemize}
-            \item Gamification elements (e.g., leaderboard, reward points).
-            \item Personalized notifications for motivational messages.
-        \end{itemize}
-        
-    \item \textbf{Constructing New Knowledge:}
-        \begin{itemize}
-            \item Prompt and direct feedback to rehearse information.
-            \item Features to stimulate self-learning.
-            \item Reminder notifications to review and revisit materials.
-        \end{itemize}
-\end{enumerate}
-
-\section*{Self-Reflection Phase:}
-
-\begin{enumerate}
-    \item \textbf{Self-Evaluation Challenges:}
-        \begin{itemize}
-            \item Self-evaluation analytics features based on various standards, including:
-                \begin{itemize}
-                    \item Certain targeted output criteria.
-                    \item Group performance without competition aspects.
-                    \item Own standards or past performance track record.
-                    \item Review from experts.
-                    \item Review from peers or other references.
-                    \item Recommendations on future improvement and learning goals.
-                \end{itemize}
-        \end{itemize}
-        
-    \item \textbf{Concerns about Data Ethics:}
-        \begin{itemize}
-            \item Need for information on Data Privacy, Data Transparency, and Data Security.
-            \item Awareness of what data is acquired, for what purpose, and how it is secured.
-        \end{itemize}
-        
-    \item \textbf{Data Privacy and Security:}
-        \begin{itemize}
-            \item Students expressing concerns about sharing personal data.
-            \item Request for information on data acquisition, purpose, and security.
-        \end{itemize}
-        \BlankLine
-\end{enumerate}
+There are numerous support features that learners expect from LA; most of which can be sorted into the three general phases of self-regulation \citep{Panadero_2017, Dwiarie2023PersonalizedAnalytics}. Figure \ref{fig:selfregulation} demonstrates the diversity of support features students have requested in the past. 
 
 
-Prior assessments of learners' preferences indicate learners are interested in LA projects containing; a timeline showing current status and goals, reminders for deadlines, real-time written feedback for course materials as well as on the progression of learners' educational pathways, analysis and comparison of learners' learning style compared to peers, recommendation system for learning partners, time expected to complete tasks and read texts, support for timekeeping, planning and organising studies, adaptive recommendation of resources with a linked rating scale, personalized analysis of learners task and time management, recording and tracking of their learning activities, functionality to support psychological safety such as anonymity, analytic features to stimulate excitement for learners, prompts to help learners engage in the overall construction of new knowledge, additional help in assessing learner's needs for objective self-evaluation \citep{Schumacher2018FeaturesAnalytics}. There is also growing interest in challenging institutional reliance on measurable digital footprints as proxies for academic success by taking into account qualitative narratives, self-directed learning data, social networking models and personal financial data for resource utilization \citep{Joseph-Richard2023WhichPerspective}. As \citet{Joseph-Richard2023WhichPerspective} states; "Displaying data on the money making potential of courses or how much money is spent on fees in comparison with, for example, the extent to which they used the library sources, motivates 40\% of our participants. This information when presented with the data about other students’ economic behaviors appears to be a powerful motivator of success.".
+\begin{longtable}{p{0.15\linewidth} | p{0.2\linewidth} | p{0.55\linewidth}}
+\caption{An overview of the support features learners at whole expect from LA sorted into the three general phases of self-regulation.} \label{fig:selfregulation} \\
+\toprule
+Phase &
+  Subphase &
+  Features \\ \midrule
+Forethought Phase &
+  Understanding the Capital T Task &
+  General learning path visualization. \newline
+  End goal visualization. \newline
+  Task instruction visualization. \newline
+  Output criteria visualization. \\
+ &
+  Motivation Exploration &
+  Personalized recommendation features based on learning interest, learners initial level of capabilities, outcome expectancies, and goal orientation for the future career journey. \newline \\
+Performance Phase &
+  Time Management and Task Challenges &
+  Information for time prioritization.\newline
+  Prompts to break down goals.\newline
+  Reminders for the target. \\
+ &
+  Tracking Learning Activities and Progress &
+  Recording and tracking features for learning activities (e.g., time spent, active rate, completion status).\newline
+  Progress of learning goals.\newline
+  Observation of peers' learning activities progress. \\
+ &
+  Efficient Access to Information &
+  Traces to highlight information.\newline
+  Recommendations based on interest keywords and popularity. \\
+ &
+  Help-Seeking for Social Support &
+  Recommendations to connect with resourceful experts or peers. \newline
+  Functions to support psychological safety (e.g., anonymous options). \\
+ &
+  Regulating Emotions and Motivation &
+  Gamification elements (e.g., leaderboard, reward points). \newline
+  Personalized notifications for motivational messages. \\
+ &
+  Constructing New Knowledge &
+  Prompt and direct feedback to rehearse information.\newline
+  Features to stimulate self-learning. \newline
+  Reminder notifications to review and revisit materials. \newline \\
+Self-Reflection Phase &
+  Self-Evaluation Challenges &
+  Self-evaluation analytics features based on various standards, including certain targeted output criteria, group performance without competition aspects, own standards or past performance track record, review from experts, review from peers or other references, recommendations on future improvement and learning goals. \\
+ &
+  Concerns about Data Ethics &
+  Need for information on Data Privacy, Data Transparency, and Data Security. \newline
+  Awareness of what data is acquired, for what purpose, and how it is secured. \\
+ &
+  Data Privacy and Security &
+  Students expressing concerns about sharing personal data. \newline
+  Request for information on data acquisition, purpose, and security. \\ \bottomrule
+\end{longtable}
+
+
+Prior assessments of learners' preferences indicate learners are interested in LA projects containing; a timeline showing current status and goals, reminders for deadlines, real-time written feedback for course materials as well as on the progression of learners' educational pathways, analysis and comparison of learners' learning style compared to peers, recommendation system for learning partners, time expected to complete tasks and read texts, support for timekeeping, planning and organising studies, adaptive recommendation of resources with a linked rating scale, personalized analysis of learners task and time management, recording and tracking of their learning activities, functionality to support psychological safety such as anonymity, analytic features to stimulate excitement for learners, prompts to help learners engage in the overall construction of new knowledge, additional help in assessing learner's needs for objective self-evaluation \citep{Schumacher2018FeaturesAnalytics}. 
+
+There is also growing interest in challenging institutional reliance on measurable digital footprints as proxies for academic success by taking into account qualitative narratives, self-directed learning data, social networking models and personal financial data for resource utilization \citep{Joseph-Richard2023WhichPerspective}. As \citet{Joseph-Richard2023WhichPerspective} states; "Displaying data on the money making potential of courses or how much money is spent on fees in comparison with, for example, the extent to which they used the library sources, motivates 40\% of our participants. This information when presented with the data about other students’ economic behaviors appears to be a powerful motivator of success.".
 
 \subsection{Implementation}
 \subsubsection{Trust}
-Perhaps the most crucial factor to consider for a successful implementation of an LA project is its trustworthiness. Third-party LA projects suffer from low levels of trust due to concerns around the privacy of data, use of outdated materials, and lack of governance in the aforementioned data \citep{ShannanAlzahrani2023DoStudy}. In-house LA projects suffer from low levels of trust due to missing transparency regarding the data use, viable project usefulness, and lack of belief in the competence of the institute \citep{ShannanAlzahrani2023DoStudy}. Analytics literacy is a key component in the belief of the project's usefulness, as users can easily misunderstand the use cases of the project and the limitations involved \citep{Feldstein_2017}. \citet{Papamitsiou2014InternationalEvidence} conducted SWOT analysis of LA projects shows human judgement as a major weakness of implemented LA projects, suggesting that the average user may have to acquire a specific skill set to be able to interpret results shown correctly. The complexity of intricate LA projects can result in a lack of generality for the results and an increased potential for the misclassification of patterns \citep{Papamitsiou2014InternationalEvidence}. These challenges contribute to conflicting findings regarding trust in the implementation of LA systems \citep{Papamitsiou2014InternationalEvidence}.
+\hfill
+
+Perhaps the most crucial factor to consider for a successful implementation of an LA project is its trustworthiness. Third-party LA projects suffer from low levels of trust due to concerns around the privacy of data, use of outdated materials, and lack of governance in the aforementioned data \citep{ShannanAlzahrani2023DoStudy}. In-house LA projects suffer from low levels of trust due to missing transparency regarding the data use, viable project usefulness, and lack of belief in the competence of the institute \citep{ShannanAlzahrani2023DoStudy}. Analytics literacy is a key component in the belief of the project's usefulness, as users can easily misunderstand the use cases of the project and the limitations involved \citep{Feldstein_2017}. 
+
+\citet{Papamitsiou2014InternationalEvidence} conducted SWOT analysis of LA projects shows analytical literacy as a major weakness of implemented LA projects, suggesting that even the most average user may have to acquire a specific skill set to be able to interpret results shown correctly. The complexity of intricate LA projects can result in a lack of generality for the results and an increased potential for the mis-classification of patterns \citep{Papamitsiou2014InternationalEvidence}. These challenges contribute greatly to conflicting findings regarding trust in the implementation of LA systems \citep{Papamitsiou2014InternationalEvidence}.
 
 \subsubsection{Relationship Changes}
-There are pedagogical concerns surrounding the transformation of student-educator, student-tutor, and student-course content relations due to LA and the use of technology for education in general \citep{Yen-TingLiuLearningPoint, Tempelaar2017AcceptedAssessment, Agudo-Peregrina2014CanLearning}. These concerns arise from their intrusion into individuals' private lives, as the boundaries between learning spaces and homes \citep{Baek2023Educational2019}. Another cause for concern is when the holistic nature of learning is not taken into account; perceived risk within a course is viewed as an independent variable, with dependent variables factors such as lecture attendance, active learning, motivation, prior academic performance and social connection \citep{Ifenthaler2020UtilisingReview}. This lack of contextualization within the bigger picture is exactly why during the COVID-19 pandemic measures of interaction were recorded and flagged as factors for poor performance across multiple institutes, for students to ‘fix’, without addressing the damaging effects that isolation in lockdown had on members of the student population. As a direct result of this breach of common sense, many educators critique LA by focusing on the importance of human presence \citep{MerikkoTechnologicalProcess}.
+\hfill
+
+There are pedagogical concerns surrounding the transformation of student-educator, student-tutor, and student-course content relations due to LA and the use of technology for education in general \citep{Yen-TingLiuLearningPoint, Tempelaar2017AcceptedAssessment, Agudo-Peregrina2014CanLearning}. These concerns arise from their intrusion into individuals' private lives, as the boundaries between learning spaces and homes \citep{Baek2023Educational2019}. 
+
+Another cause for concern is when the holistic nature of learning is not taken into account; perceived risk within a course is viewed as an independent variable, with dependent variables factors such as lecture attendance, active learning, motivation, prior academic performance and social connection \citep{Ifenthaler2020UtilisingReview}. This lack of contextualization within the bigger picture is exactly why during the COVID-19 pandemic measures of interaction were recorded and flagged as factors for poor performance across multiple institutes, for students to ‘fix’, without addressing the damaging effects that isolation in lockdown had on members of the student population. As a direct result of this breach of common sense, many educators critique LA by focusing on the importance of human presence \citep{MerikkoTechnologicalProcess}.
 
 \subsubsection{Self Regulation}
-Human presence is shown to be a significant factor for learners' success; with self-efficiency in social networking positively correlating to active academic help-seeking as well as an increased social presence within the learning environment \citep{Keshavarzi2023MediatingEnvironments}. Similarly, learners self-belief in their academic abilities positively correlates with their use of online services to help comprehend, organize and finalize their assessments \citep{Keshavarzi2023MediatingEnvironments}. The bridge between both of these skills, self-regulation, can be supported by LA projects taking the guise of pedagogical agents; scaffolding the responsibility and the skill set required for self-regulation from the LA project onto the learner themselves \citep{MerikkoTechnologicalProcess}. This must be done with careful consideration, demonstrated by the use of structured learning diaries by \citet{MerikkoTechnologicalProcess} for their LA project; whilst the diaries proved to successfully capture cognitive, emotional and motivational aspects of the self-regulation journey of learners, it harmed the self-regulation habits of a sub-group of students. When planning LA projects with the capacity to intervene in the self-regulation of learners, all three phases of self-regulation must be carefully taken into account; preparation, performance and appraisal \citep{Heikkinen123SupportingReview}. 
+\hfill
+
+Human presence is shown to be a significant factor for learners' success; with self-efficiency in social networking positively correlating to active academic help-seeking as well as an increased social presence within the learning environment \citep{Keshavarzi2023MediatingEnvironments}. Similarly, learners self-belief in their academic abilities positively correlates with their use of online services to help comprehend, organize and finalize their assessments \citep{Keshavarzi2023MediatingEnvironments}. The bridge between both of these skills, self-regulation, can be supported by LA projects taking the guise of pedagogical agents; scaffolding the responsibility and the skill set required for self-regulation from the LA project onto the learner themselves \citep{MerikkoTechnologicalProcess}. 
+
+This must be done with careful consideration, as demonstrated by the use of structured learning diaries by \citet{MerikkoTechnologicalProcess} for their LA project; whilst the diaries proved to successfully capture cognitive, emotional and motivational aspects of the self-regulation journey of learners, it harmed the self-regulation habits of a sub-group of students. When planning LA projects with the capacity to intervene in the self-regulation of learners, all three phases of self-regulation must be carefully taken into account; preparation, performance and appraisal \citep{Heikkinen123SupportingReview}. 
 
 \subsubsection{Behaviourism}
-Historically self-regulation, alongside other socio-emotional skills, was thought of as separate from personality traits; personality traits were fixed and socio-emotional skills could be changed with intervention. This is now considered inaccurate. Personality psychology can be used to accurately predict learners' educational outcomes, inform the basis of educational interventions and overall support academic development in learners \citep{Jach123HowResearch}. Learners personality traits can be used as target outcomes for students on their educational path, i.e. for a student struggling with coursework due to their first-year new place anxiety, working on lowering neuroticism (potential for anxiety and depression) and increasing agreeableness (potential for pro-social attitudes and behaviours) could be beneficial \citep{Jach123HowResearch}. If utilized within a LA project, personality trait tracking should be done with an extreme degree of caution, transparency to learners, and expert advice from the psychology field, since it is behaviourism; without the right accompanying elements, its usage does not focus on learners cognitive skills, carries limited application towards complex learning, does not care for individualization and increases potential for negative emotional impact by reinforcing the presence of traits that the learner sees as undesirable \citep{Tprestianni_2023}.
+\hfill
+
+Historically self-regulation, alongside other socio-emotional skills, was thought of as separate from personality traits; personality traits were fixed and socio-emotional skills could be changed with intervention. This is now considered inaccurate. Personality psychology can be used to accurately predict learners' educational outcomes, inform the basis of educational interventions and overall support academic development in learners \citep{Jach123HowResearch}. Learners personality traits can be used as target outcomes for students on their educational path, i.e. for a student struggling with coursework due to their first-year new place anxiety, working on lowering neuroticism (potential for anxiety and depression) and increasing agreeableness (potential for pro-social attitudes and behaviours) could be beneficial \citep{Jach123HowResearch}. 
+
+If utilized within a LA project, personality trait tracking should be done with an extreme degree of caution, transparency to learners, and expert advice from the psychology field, since it is behaviourism; without the right accompanying elements, its usage does not focus on learners cognitive skills, carries limited application towards complex learning, does not care for individualization and increases potential for negative emotional impact by reinforcing the presence of traits that the learner sees as undesirable \citep{Tprestianni_2023}.
 
 
  
-\subsection{Ethics and Law}
+\subsection{Ethics}
 
 \subsubsection{Data Gathering}
-Ethical conundrums surrounding the handling of big data focus on de-contextualization; and how it links to questionable claims of objectivity and generality - to combat this data handling must be transparent, personalized, networked, transportable, adaptive and interactive \citep{BeattieCreepyRights}. The potential LA has to further along the digital divide (the gap between demographics and regions with access to technological advancements and those without) must also be addressed \citep{BeattieCreepyRights}. What data we handle is also important; as there is strong evidence to suggest that the common practice of analyzing access log patterns has limited educational value, with potential benefits present for learners from deeper analyses of complex data \citep{Dietrichson2013BeyondPedagogies}. Combining qualitative data taken from various forms of assignments along with qualitative analysis can provide a more nuanced perspective \citep{Martinez2023Content-FocusedData}. This also has the benefit of potentially empowering learners' initiative for their education journey. Despite the hesitancy among learners to discuss sensitive information about themselves and their learning process, there is a demand for LA-based support for those topics \citep{MerikkoTechnologicalProcess}. Often learners, and educators, can hold mistaken assumptions about the value of individual learning processes - perhaps this is where the aforementioned hesitancy comes from. 
+\hfill
+
+Ethical conundrums surrounding the handling of big data focus on de-contextualization; and how it links to questionable claims of objectivity and generality - to combat this data handling must be transparent, personalized, networked, transportable, adaptive and interactive \citep{BeattieCreepyRights}. The potential LA has to further along the digital divide (the gap between demographics and regions with access to technological advancements and those without) must also be addressed \citep{BeattieCreepyRights}. What data we handle is also important; as there is strong evidence to suggest that the common practice of analyzing access log patterns has limited educational value, with potential benefits present for learners from deeper analyses of complex data \citep{Dietrichson2013BeyondPedagogies}. 
+
+Combining qualitative data taken from various forms of assignments along with qualitative analysis can provide a more nuanced perspective \citep{Martinez2023Content-FocusedData}. This also has the benefit of potentially empowering learners' initiative for their education journey. Despite the hesitancy among learners to discuss sensitive information about themselves and their learning process, there is a demand for LA-based support for those topics \citep{MerikkoTechnologicalProcess}. Often learners, and educators, can hold mistaken assumptions about the value of individual learning processes - perhaps this is where the aforementioned hesitancy comes from. 
 
 
 \subsubsection{Borderline Creep Factor}
-We've all had the mutual moment of understanding as analytics moves from the territory of something useful and uncannily accurate to something that is deemed 'creepy analytics' by many; a colloquial that describes the invasion of data analytics upon the private lives of individuals. This can involve a lack of explicit consent and transparency regarding the process; much like when you click 'accept all' on Google and realize that you are now in the digital filter bubble matrix of marketing, forever \citep{Arthur_2013}. Creepy analytics within the field of LA stems from pervasive data collection methods such as biometrics and geopositioning, inherent human bias reflected within algorithms, intrusive predictions, and network mapping, all of which are uncomfortable and have the potential to violate learners boundaries \citep{BeattieCreepyRights}. The collection of big data on learners leaves them vulnerable to harm from hackers as well as malfeasance and misfeasance within the institute \citep{Daniel2016BigPractice}. The practice of utilizing LA for data-driven grading criteria has particularly unethical consequences that impact sub-groups of learners \citep{DimopoulosCONFERENCEPerformance}. As \citet{Sclater2016DevelopingAnalytics} demonstrates, creating a code of practice for assigning responsibility within institutions is key to avoiding introducing the 'creep factor' into LA projects.
+\hfill
+
+We've all had the mutual moment of understanding as analytics moves from the territory of something useful and uncannily accurate to something that is deemed 'creepy analytics' by many; a colloquial that describes the invasion of data analytics upon the private lives of individuals. This can involve a lack of explicit consent and transparency regarding the process; much like when an individual clicks 'accept all' on Google and only realizes far later that they are now in the digital filter bubble matrix of marketing, forever \citep{Arthur_2013}. Creepy analytics within the field of LA stems from pervasive data collection methods such as biometrics and geopositioning, inherent human bias reflected within algorithms, intrusive predictions, and network mapping, all of which are uncomfortable and have the potential to violate learners boundaries \citep{BeattieCreepyRights}. 
+
+The collection of big data on learners leaves them vulnerable to harm from hackers as well as malfeasance and misfeasance within the institute \citep{Daniel2016BigPractice}. The practice of utilizing LA for data-driven grading criteria can carry particularly harmful consequences that impact certain sub-groups of learners \citep{DimopoulosCONFERENCEPerformance}. As \citet{Sclater2016DevelopingAnalytics} demonstrates, creating a code of practice for assigning responsibility within institutions is paramount to avoiding introducing the 'creep factor' into LA projects.
 
 \subsubsection{Responsibility}
-The assignment of responsibility introduces its slew of paradoxical demands for those lucky enough to find themselves in charge; individuals may become burdened by an intense desire to clearly define the ethics behind their area, collecting as much data and analyzing the issue as far as is possible \citep{Lee2023ItsProgram}. The need to understand all aspects of concerns and problem-solve is a human instinct, but not everything falls into the realm of reason. In \citet{Lee2023ItsProgram} most mentors chose not to disclose information learned through LA about their mentees to their mentees. Although the mentors had taken the burden of responsibility for the mentee's educational pathways, they were unwilling to discuss why, and actions taken by mentors based on LA could not be aptly explained to mentees - causing conflict and changing the mentor's perceptions of their role. Mentor attention also focused on practices directly improving their mentee's scores, leaving mentees missing out on the rich variety of practices mentors and mentees would otherwise engage with. 
+\hfill
 
-***********************LAW PART TO ADD TO*****************************
+The assignment of responsibility introduces its slew of paradoxical demands for those lucky enough to find themselves in charge; individuals may become burdened by an intense desire to clearly define the ethics behind their area, collecting as much data and analyzing the issue as far as is possible \citep{Lee2023ItsProgram}. The need to understand all aspects of concerns and problem-solve is a human instinct, but not everything falls into the realm of reason. This mindset has proven to be detrimental to those who view themselves in positions of responsibility. In \citet{Lee2023ItsProgram} most mentors chose not to disclose information learned through LA about their mentees to their mentees. Although the mentors had taken the burden of responsibility for the mentee's educational pathways, they were unwilling to discuss why, and actions taken by mentors based on LA could not be aptly explained to mentees - causing conflict and changing the mentor's perceptions of their role. Mentor attention also focused on practices directly improving their mentee's scores, leaving mentees missing out on the rich variety of practices mentors and mentees would otherwise engage with. 
 
-\section{Summary}
 
-My review of pre-existing literature has highlighted the requirement for an underlying theoretical framework, and in line with my aims of supporting student self-regulation, I will be utilizing \citet{zimmerman2009self} theory of self-regulation as the foundational framework. Due to the constraints of this project, I will not be able to provide any rigorous, large-scale evidence for the effectiveness of LA implementations; however, I hope to provide a prototype showcasing the learner's interface for an institute-wide LA project, working alongside learners whilst utilizing agile methodologies. Careful consideration of data handling due to the fluid nature of ethics and law regarding LA, the differences present in structure across courses, and the evolution of educational theory needs to also be taken into account, with built-in flexibility and support for the growth of the LA project.  Learners may require additional material to improve their analytics literacy. The project should also have a strong focus on establishing and growing connections among learners, educators and course content. Analysis of potential benefits and consequences around utilizing personality trait analyses should be conducted before deciding if it will continue to be included in the design. Learners have substantial, varied expectations from LA support features, but are wary of creepy practices and breaches of privacy. Learners need to have full control over their data, as well as full transparency over the process. What one learner is willing to compromise on, another is not, and this will also have to be taken into account. Assessing responsibility is critical for LA projects, however the assignment of responsibility may lead to conflicts and changing perceptions of roles for learners and educators.
+\section{Key Takeaways}
+
+There is clear precedence for the need to have an underlying theoretical framework present this study, and in line with our aims of supporting student self-regulation, I will be primarily utilizing \citet{zimmerman2009self} self-regulation theory. The underpinning learning theory that supports the use self-regulation is regarded as constructivism, where learning is an active process that involves creation, synthesization and application of concepts based on learners current and past knowledge \citep{mcleod2019constructivism}. We also utilize connectivism, another learning theory which places the emphasize on the impact of technology, society as a whole, individual networks, and work-related activities \citep{duke2013connectivism, goldie2016connectivism}. Connectivism denounces the boundaries present in behaviorism, cognitivism, and constructivism; taking the focus away from observable behaviour and onto the inner workings of learners minds \citep{duke2013connectivism}. 
+
+Connectivism leanring theory fits nicely into how machine learning operates; since a main component of connectivism is, well, connecting - 
+the learning process is seen as a connection of information sources where learning takes place when a learner makes a decision, making the capacity to know far more crucial than the limit on what the learner presently knows. Anyy knowledge base can be mapped out through utilization of machine learning techniques to infer relationships between entities based on patterns and connections present within the data. Whether or not this mapping is useful - applicable to the task at hand - depends on the feature selection present in the model, the quality of the input data and the state of the model itself; hyperparameters tuned, the resources allocated, and the architecture \citet{despujol2022we}. There has also been work done on extracting knowledge bases from language models, suggesting that with a large enough corpus of text, relations can be extracted - ideal for mapping out key concepts in courses and the skills required for successful application of concepts for the intended learning outcomes \citet{petroni2019language}. 
+
+Due to the constraints of this project, I will not be able to provide any rigorous, large-scale evidence for the effectiveness of LA implementations, which prior research shows the field lacks; however, I hope to provide a prototype showcasing the learner's interface for an institute-wide LA project, working alongside learners whilst utilizing agile methodologies. This approach unfortunately mainly follows a bricolage way of involving learners within the development process; working with students to gain insight into their lived experiences. The intitial interview will involve discussion of support features other learners have mentioned, following Table \ref{fig:selfregulation}. Learners have substantial, varied expectations from LA support features, but are wary of creepy practices and breaches of privacy. 
+
+Careful consideration of data handling due to the fluid nature of ethics and law regarding LA, the differences present in structure across courses, and the evolution of educational theory needs to also be taken into account. This means creating built-in flexibility and structures that support the growth of the LA project. It has been made apparent that learners may require additional material to improve their analytics literacy. The project should also have a strong focus on establishing and growing pre-existing connections among learners, educators and course content, particularly to avoid a negative institute culture surrounding the use of LA. Analysis of potential benefits and consequences around utilizing personality trait analyses should be conducted with interviewees before deciding if it will continue to be included in the design. 
+
+Learners must have as much control over their data as possible, and there needs to be full transparency present over the processing and handling of their data. What one learner is willing to compromise on, another is not, and to what extent this will need to b taken into account for the design process needs to be clarified in the initial interview. Assessing responsibility is critical for LA projects, however the assignment of responsibility may lead to conflicts and changing perceptions of roles for learners and educators. As we are developing a prototype, this is an important note to make to influence our design choices however the assignment of responsibility and measure of change in behaviour for the learner-educator relationship is outside of the scope of this study.
+
+
+
 
 %==================================================================================================================================
-\chapter{Analysis/Requirements}
-What is the problem that you want to solve, and how did you arrive at it?
-\section{Guidance}
-Make it clear how you derived the constrained form of your problem via a clear and logical process. 
+\chapter{Analysis with Initial Interviews}
 
-%==================================================================================================================================
-\chapter{Design}
-How is this problem to be approached, without reference to specific implementation details? 
-\section{Guidance}
-Design should cover the abstract design in such a way that someone else might be able to do what you did, but with a different language or library or tool.
+\section{Note on Novel Methodology}
+For this study we utilize a novel research methodology that combines best practices around agile product creation with participatory design principles primarily as an information-gathering device to examine perceived insights of a select sub-group of the student population. The initial interview has been utilized to identify and examine the effects of a subset of theoretical factors on the views that our participants hold of LA with the use of a connectivist lens. To reiterate, connectivism states that learning can reside outside of the individual - and is ultimately the pursuit of networking and pattern recognition across chaos. This allows learning to take on more of a critical role than simply knowing, requiring shifting the educational focus onto aiding learners perceive connections between ideas and concepts. As such, participants are more than welcome to consider outside sources to aid their insight giving during the initial interview as well as the follow up interviews concerning changes to components for the LA prototype i.e. 'falling down a Wikipedia rabbit hole' and ending up on the Institute's own site reading the policy is more than encouraged by us.
 
-%==================================================================================================================================
-\chapter{Implementation}
-What did you do to implement this idea, and what technical achievements did you make?
-\section{Guidance}
-You can't talk about everything. Cover the high level first, then cover important, relevant or impressive details.
+Towards the end of the initial interview we direct our focus on outlining a set of basic and goals for the design of the prototype creation, harnessing the collective power of the participant group by creting a MoScoW prioritization board. MoSCoW prioritization is used since it lets us assess and quickly categorize participants likes and dislikes with ease of use - this is ideal for our participants as all were unfamiliar with the notion of requirement gathering (Hatton 2007). Follow up interviews are conducted to iterate through different versions of components created through the initial interviews and design process. The primary aim of this novel methodology is information gathering; to learn key insights regarding our participants perception of LA, with intense focus placed on the changes in participants perception brought on through modification of components and familiarization with LA principles. The secondary aim is to produce a prototype. This methodology has been devised as an approach to garner as much insight as possible to the changes in perception that occur as students become involved within the development of a LA system. We will be using identified theoretical factors from the initial interview to analyse throughout the process.
 
+\section{Participants}
+Through our literature review, it became evident that working closely with a select subgroup of the student body offers the most effective approach to gaining a holistic and in-depth understanding of how Learning Analytics (LA) can integrate into their lives. In this study, we engaged with a total of five participants, consisting of four males and one non-binary individual, all of whom were undergraduates at the University of Glasgow. The participants had an average age of 22.2 years (with a minimum age of 20, a maximum of 26, and a standard deviation of 2.1). Three of the participants self-described themselves as wary of online data tracking during our our initial demographic and background questions. These participants employed practices such as disabling cookies and abstaining from social media accounts to decrease the availability of personal data online. One participant pursued a major in philosophy, while the remaining participants were all STEM students. All participants in this study had a pre-existing relationship with the interviewer - whilst a pre-existing relationship can facilitating a deeper understanding of phenomena within the participants' lives due to the presence of pre-existing trust allowing for open-ness in communication, there are concerns to be raised surrounding the potential impact it may have had on the dynamics of the interviews. The use of a shared lexicon has proven itself to be difficult to de-code into intelligible ramblings, and key contextual information may have been lost through modification to improve readability. This could have implications for the authenticity of the data collected as well as our interpretation of insights present. 
 
+\section{Holistic Interplay}
+The initial round of interviews done with our participants revealed that there are three key areas with factors that have long-lasting impacts on their journey in higher education; 
+\begin{itemize}
+    \item  Socio-economic: These factors can also affect the general public, and include factors such as the cost of living crisis, Brexit, withdrawal of research funding.
+    \item Individual: These affect individual students, and include factors such as  maintaining relationships, unnecessary commute time, pre-existing health conditions, and differing priorities.
+    \item University: These affect primarily students at the institute, and include factors such as increased student intake, strikes, changes in curriculum.
+\end{itemize}
+There are a lot of overlapping connections present within the different areas i.e. withdrawal of research funding → increased student intake → unnecessary commute time. It is particularly important to note that factors affect different cohorts differently, and contribute greatly to the variance within grades. This is why it is not simply enough to measure the grades before and after introduction of LA projects into student educational spheres to measure success. Measuring success for LA projects has proven itself to be a sore point for contest; with various terms such as increased self-esteem and engagement being thrown around without prior definition nor proper handling.
 
-\section{General points}
-
-These points apply to the whole dissertation, not just this chapter.
+\section{Identification of Theoretical Factors}
 
 
+The ability to evaluate one's self is a crucial aspect of \citet{zimmerman2009self} theory of self-regulation. Implementing scaffolding for self-evaluation presents a significant challenge, as educational institutions themselves struggle to facilitate effective self-evaluation without the involvement of professional evaluators\citep{mcnamara2008importance}. The majority of participants expressed a desire for the prototype Learning Analytics (LA) system to offer an overview of their progress in their educational journey. Surprisingly, none of the participants were aware of any previous LA projects within the institute or existing policies. Despite this lack of awareness, the idea of using LA to modify courses and enhance learning appealed to most participants. 
 
-\subsection{Figures}
-\emph{Always} refer to figures included, like Figure \ref{fig:relu}, in the body of the text. Include full, explanatory captions and make sure the figures look good on the page.
-You may include multiple figures in one float, as in Figure \ref{fig:synthetic}, using \texttt{subcaption}, which is enabled in the template.
+Almost all participants strongly advocated for the inclusion of a feature in the prototype that would provide them with an overview of their position in their learning journey. Participant S disagreed, preferring to enjoy the process instead of fixating on the progress (Self-Evaluation, Table \ref{Analysis:Identification of Theoretical Factors}). This conflict among participants highlights the importance of acknowledging personal preferences in the development of LA systems, especially given the small participant pool in this study. It underscores the need for flexibility in LA tools to accommodate varying perspectives and preferences regarding self-evaluation and progress tracking. 
+
+All participants want to know more about what data is being used, to what extent, and how they can limit it if necessary (Data Autonomy, Table \ref{Analysis:Identification of Theoretical Factors}). Most participants have strong feelings surrounding the profiling of students with data; they agree that on the whole some light degree of profiling for tailored support is necessary, however there are valid concerns present around the use of social engineering for transforming the institutional educational sphere into a self-governing machine (Profiling, Table \ref{Analysis:Identification of Theoretical Factors}). 
+
+One of the participants described the creep-factor of monitoring and flagging students based upon undesired characteristics using the metaphor of a panoptican prison; a state of control where the fear of instability causes ruthless social engineering for a society without privacy nor any tolerance for the deviant. Whilst this is quite the extreme description, a state of emergency can and does commonly lead to the misuse of tools created for education \citep{wilson1989consequential}. 
+
+There are questions about how much data should be collected and who benefits from creating systems for LA. This becomes especially important when we think about universities needing funding and interesting research, particularly in the environment of competitive academia. Students might be seen as sources of valuable information to sustain the institution; gathering personal data to categorize individuals and possibly influence them raises concerns about individuals losing their voice when their data is misused (Surveillance Capitalism, \ref{Analysis:Identification of Theoretical Factors}). There is a parallel already present within this study since it utilizes students as valuable assets for research - a practice so common that it has lead to the WEIRD phenomenon in the field of psychology. 
+
+Participants also expressed that their trust in a LA system is only extended as far as their trust in the institute itself, and that being able understanding the inner workings of the system is would greatly affect their levels of trust (Trust in Code, \ref{Analysis:Identification of Theoretical Factors}). There are also very valid concerns present that this is a new wave of automation to cut down costs - a concept that itself is not inherently negative since there is potential to increase the time staff have to focus on tasks that have higher levels of importance to students by scaffolding some of the burden of understanding (Human Connection, \ref{Analysis:Identification of Theoretical Factors}). 
+
+Including personalised motivators was thought of as useful by most participants, however, there’s potential for too much extrinsic motivation detracting away from individuals  being able to develop their
+own intrinsic motivators (Artificial Motivation, \ref{Analysis:Identification of Theoretical Factors}). Participants were also greatly concerned that unique aspects of their educational journey would be reduced through the unification of teaching materials and the development of their own style for completing coursework and assessments would also be discouraged (Unique Educational Aspects, \ref{Analysis:Identification of Theoretical Factors}). With a lot of data analytics, and in-particular machine learning, the issue of generalization may factor into discouragement of unique takes - particularly for feature mapping where a lot of what is considered meaningful data to the algorithm involved may be arbitrary differences in style \citep{zhang2021understanding}. 
+
+Having more algorithmic oversight may make for a greater level of fairness when it comes to students receiving the same level and quality of education, particularly when it comes to marking assessments and receiving detailed feedback for their work (Questions of Fairness, \ref{Analysis:Identification of Theoretical Factors}). Most participants agree that there are numerous confounding factors already at play when it comes to academic integrity and questions of fairness, and the two participants who stated that they would most likely opt-out both said that they would not mind taking on the burden of responsibility when it comes to potentially decreasing their chances of a higher grade. 
+
+On an interesting note, all of the participants had far more tolerant views on behaviourism than prior research indicated, with one remarking that the whole point of data analytics is behaviourism (Behaviourism, \ref{Analysis:Identification of Theoretical Factors}). There were concerns raised around going beyond students boundaries when it comes to influencing them, and whether or not students would be aware of setting boundaries as well as and knowing when their boundaries have been breached. Participants stressed that students must be willing to change their behaviour. The question of who benefits from behaviourism was brought forth, and linked back to surveillance capitalism. 
+
+\textbf{The most important note regarding our initial interviews is that all of our participants had expressed in some way that they feel the use of LA within institutes of higher education is inevitable. }
 
 
+\begin{longtable}
+{p{0.15\linewidth} | p{0.30\linewidth} | p{0.45\linewidth}}
+\caption{An overview of the supporting evidence for the ten Identified Theoretical Factors during the initial interview round, complete with an Author's Summary.} \label{Analysis:Identification of Theoretical Factors} \\
+\toprule
+Identified Theoretical Factors &
+  Author's Summary &
+  Supporting Quotes \\ \midrule
+Trust in Code &
+  Participants would like to be able to see or at least understand the inner workings behind outcomes. Trust in code is only extended as far as their trust in the institute. &
+  P: "Human bias and black box issues certainly do come into question."  \newline
+  S: "How are conclusions being made? There's a discussion about greater good to be had - you should look into virtue ethics..."  \newline
+  J:"Very little trust in algorithms, and in the university staff to interpret them. You’d need a professional, and analytics is really just summarizing what you were doing, so it’s never going to paint a full picture of who you are anyway. " \newline\\
+Artificial Motivation &
+  Personality motivators seem useful, however, there’s potential for too much extrinsic motivation detracting away from people being able to develop their own intrinsic motivators. \newline &
+  S:"If you wanna do something on your own at the end of the day you’re fucked” \newline\\
+Unique Educational Aspects &
+  Having a more unified way of assessing and teaching in general could detract from the students enjoyment greatly. Most of the students seem to enjoy the human aspects of their educational journey - including the hiccups along the way - greatly. &
+  P:"I like turning up to a lecture and having their particular style - it makes the lecture more interesting than this uniform grey sludge that is primary and secondary school education." \& "If you go into academia, developing your own style is good [...] certain things are so codified in a way that all individuality is discouraged." \newline
+  S:"Utilitarianism uh, is is their ideology I guess [...] you'd inevitably be shining out voices, a unique voices, um, which are important for, for moving Humanity forward with various unique and interesting ideas." \newline\\
+Questions of Fairness &
+  Participants believe that having more algorithmic oversight could be great for ensuring a greater level of fairness when it comes to everyone receiving roughly the same quality of education. Most acknowledge that there are many confounding factors at play - complete fairness is impossible. &
+  S:"So it's not like those {[}disparities{]} don’t already exists, right? Life is unfair. Assessments themselves are kind of weird." \newline
+  I:"I guess if someone opts out they won't necessarily receive the same level of support as someone that's opted in - but that's their choice to make. We can't make all students turn up to lectures either - and sometimes, that, that benefits a select few." \newline\\
+Human Connection &
+  There are valid concerns that this is a new wave of automation replacing humans. Some participants acknowledge that certain features could aid with increasing human to human communication. &
+  P:"There are not enough people to ask things - I’m dyslexic and coding in R doesn’t show you grammatical errors nor were the error messages useful. So having an algorithm pick up on these things would greatly help me, and it could mean the tutors are less overwhelmed too."  \newline
+  L:"Teachers don’t talk to each other in some ways and they end up doing the same material - that is a pain." \newline
+  S:"Whatever measure the university comes up with [to reach out to struggling students] is gonna be so artificial, you know?" \newline\\
+Behaviourism &
+  The participants had quite tolerant views on behaviourism. Wary of putting aspects into practice without consideration for the students own willingness to change their behaviour. Potential for going beyond student boundaries without students being aware of it. Issue of who really profits from behaviourism. &
+  S: "The whole point of data analytics is behaviourism, but behaviourism itself is not necessarily negative [..] I feel like the whole point of analytics is kind of behaviourism. You want them to better their learning experience. Still, I don't think some personality traits are inherently bad, it's what people make it." \newline
+  L: " It'd be good for them to better their habits. But academically it doesn't really matter. People behave differently. Doesn't matter if Jim just like took five shots of vodka before the exam if he's performing good. It works, right?" \newline
+  J: "You can modify behaviours to also be more efficient and get rid of unnecessary stuff - only to learn. To work more like like the obedient worker that you should be." \newline\\
+Surveillance Capitalism &
+  Slippery slope fallacy for data collection. Collection often defined by the capital involved; personal data extraction can be used for monetization without consent, fringing upon individual autonomy. &
+  S: "The more factors you start to include - the more it starts to feel like, uh, kind of world government, a big brother kind of situation. Could work for some people but could also be extremely suspicious - especially when it comes to monolith institutions and positions of power - who profits?"  \newline
+  J:"I wouldn't trust the university to not mess around with any data gathered in their favour for Russel Group clout. Academia is nasty business and researchers have to make a living somehow." \newline\\
+Profiling &
+  Agree that on the whole some light degree of profiling for tailored support is necessary, but there are concerns present around social engineering for transforming the institutional educational sphere into a self-governing machine. &
+  S: "You’re starting to monitor people’s psychological state - then, at that point, you should also monitor their physical well-being, right? It affects performance in the same way, and we go full red room. You build a glass cell - a panoptican. " \newline
+  L: "Classifying people into categories, if that's what you mean, means there's an expected way for certain people to behave - so what happens when they don't? Is it immediate cause for alarm?" \newline
+  I: "Universities already hard enough without the expectation that you need all your shit together or you'll fail. I think being perceived to this degree, even by code, would add to the pressure that exists around needing to be a certain archetype of person to succeed at academia." \newline\\
+Self-evaluation &
+  This was a point of conflict for participants; all except one participant highly requested a feature for aiding in tracking progression thorough their educational journey.  &
+  I: "I just need to be slapped in the face with the fact that my grades are actually good, and the work I do, I put my heart into." \newline
+  J:"Yeah, my grades tanked from year one. It's be nice to be reminded that that's normal and okay and to be totally expected." \newline
+  S: "If you subscribe to the notion of progress being linear, and then you see where you actually are, and that doesn’t fall in line with your expectations, then you’ve just lost all motivation. Sometimes you just have to keep going without checking in, because the joys found in the grind." \newline\\
+Data Autonomy &
+  All participants want to know more about what data is being used, to what extent, and how they can limit it if necessary. &
+  P: "Haven’t read any policy. Would like to know what data they have - policy has very little relevance for me since it’s usually written so vaguely. Would like to what they’re doing with it as well." \newline
+  J: "“If I’m opting out, I don’t need to know anything” \newline\\ \bottomrule
+\end{longtable}
 
-% Figures are important. Use them well.
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{images/relu.pdf}    
 
-    \caption{In figure captions, explain what the reader is looking at: ``A schematic of the rectifying linear unit, where $a$ is the output amplitude,
-    $d$ is a configurable dead-zone, and $Z_j$ is the input signal'', as well as why the reader is looking at this: 
-    ``It is notable that there is no activation \emph{at all} below 0, which explains our initial results.'' 
-    \textbf{Use vector image formats (.pdf) where possible}. Size figures appropriately, and do not make them over-large or too small to read.
-    }
+\section{Suggested Requirements via MoSCoW}
 
-    % use the notation fig:name to cross reference a figure
-    \label{fig:relu} 
-\end{figure}
+The requirements were gathered at the end of each interview, with the participants encouraged to add any additional suggested features they believe should be incorporated. Participants I and L created the initial 14 requirements deriving constructs from these three seed prompts given during the interview:
+\newline\newline
+\say{Learning analytics aims to achieve various goals, such as providing tailored support, predicting grades, and enhancing overall learning experiences. From your perspective, what goals do you find most beneficial or concerning?}
+\newline\newline
+\say{How do you feel about the idea of analytics influencing changes in course structures, curriculum, and support mechanisms?}
+\newline\newline
+\say{Reviewing what other students have expressed, including support for planning, personalized analysis, and psychological safety, do these align with your own needs? Are there additional aspects you'd like to emphasize or any concerns you'd like to raise?}
+\newline\newline
+No new requirements were added on from participants S, P, J. All participants expressed that they would prefer simplicity as much as possible over feature overload. Participants S and J stated at this point that they would most likely opt-out of any LA system presented to them. Contradictory areas where participants expressed different desires align with areas identified in the theoretical factors section, i.e. predicting student grades is complicated since it involves profiling to a degree, and touches upon concerns surrounding behaviourism as well as artificial motivation. 
 
 
-\begin{figure}
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{images/synthetic.png}
-        \caption{Synthetic image, black on white.}
-        \label{fig:syn1}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-      %(or a blank line to force the subfigure onto a new line)
-    \begin{subfigure}[b]{0.45\textwidth}
-        \includegraphics[width=\textwidth]{images/synthetic_2.png}
-        \caption{Synthetic image, white on black.}
-        \label{fig:syn2}
-    \end{subfigure}
-    ~ %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc. 
-    %(or a blank line to force the subfigure onto a new line)    
-    \caption{Synthetic test images for edge detection algorithms. \subref{fig:syn1} shows various gray levels that require an adaptive algorithm. \subref{fig:syn2}
-    shows more challenging edge detection tests that have crossing lines. Fusing these into full segments typically requires algorithms like the Hough transform.
-    This is an example of using subfigures, with \texttt{subref}s in the caption.
-    }\label{fig:synthetic}
-\end{figure}
+\begin{table}[h]
+\caption{The initial suggested feature chart created through utilizing the MoSCoW Prioritization Technique during interviews with students L, S, P, I and J. M stands for Must Have requirements, S for Should Have, C for Could Have, and W for Won't Have.}
+\label{tab:moscow}
+\centering
+\rowcolors{2}{}{gray!3}
+\begin{tabular}{@{}llllll@{}}
+\textbf{Suggested Features} & \textbf{L} & \textbf{S} & \textbf{P} & \textbf{I} & \textbf{J} \\ \hline
+Aid students in self-evaluation of their educational path & M & C & M & M & M \\
+Enhance overall learning experiences through connection mapping & M & S & S & M & M \\
+Aid in research on modifying course structures and components & M & S & M & M & M \\
+Follow GDPR compliance in law and in spirit & M & M & M & M & M \\
+Allocate the final say onto students as much as possible  & M & M & M & M & M \\
+Tailor support for students & S & S & S & M & C \\
+Offer support for planning and organization of educational path & S & C & M & M & C \\
+Analyze students educational path and provide feedback & S & S & C & S & W \\
+Analyze students work to provide feedback & S & M & S & M & M \\
+Recommend extra materials for students to look into & S & W & C & C & C \\
+Predict student grades & C & C & S & W & W \\
+Flag psychological safety for students & C & S & C & W & W \\
+Lack of consent (opt-out as opposed to opt-in) & W & W & W & W & W \\
+Profiling with the use of personality analysis & C & C & W & W & W \\
+\end{tabular}
+\hspace{0.5cm}
 
-\clearpage
+\end{table}
 
-\subsection{Equations}
+\section{Goals}
 
-Equations should be typeset correctly and precisely. Make sure you get parenthesis sizing correct, and punctuate equations correctly 
-(the comma is important and goes \textit{inside} the equation block). Explain any symbols used clearly if not defined earlier. 
+We learned during the intial round of interviews that gathering requirements via MoSCoW analysis proved to be a great starting point for conversations around the details of different features that could be created and lead to gathering a lot of interesting insights, however multiple participants stressed that they would require seeing the prototype to understand features such as 'Tailor support for students' as the description itself proved to be too generic. Regardless, to encourage further fluidity in design and development of components, we have generalized the requirements gathered using the MoSCoW to six initial overarching goals, with care taken to stick to insights gathered from the identification of theoretical factors (Table \ref{Analysis:Identification of Theoretical Factors}). These goals are consolidated to components in the design phase, touching upon the MoSCoW suggested features.
 
-For example, we might define:
-\begin{equation}
-    \hat{f}(\xi) = \frac{1}{2}\left[ \int_{-\infty}^{\infty} f(x) e^{2\pi i x \xi} \right],
-\end{equation}    
-where $\hat{f}(\xi)$ is the Fourier transform of the time domain signal $f(x)$.
+\begin{figure}[!ht] % I TRIED!!!!!
+    \begin{minipage}{\textwidth}
+    \caption{The six goals for the prototype.}
 
-\subsection{Algorithms}
-Algorithms can be set using \texttt{algorithm2e}, as in Algorithm \ref{alg:metropolis}.
+    \begin{enumerate}
 
-% NOTE: line ends are denoted by \; in algorithm2e
-\begin{algorithm}
-    \DontPrintSemicolon
-    \KwData{$f_X(x)$, a probability density function returing the density at $x$.\; $\sigma$ a standard deviation specifying the spread of the proposal distribution.\;
-    $x_0$, an initial starting condition.}
-    \KwResult{$s=[x_1, x_2, \dots, x_n]$, $n$ samples approximately drawn from a distribution with PDF $f_X(x)$.}
-    \Begin{
-        $s \longleftarrow []$\;
-        $p \longleftarrow f_X(x)$\;
-        $i \longleftarrow 0$\;
-        \While{$i < n$}
-        {
-            $x^\prime \longleftarrow \mathcal{N}(x, \sigma^2)$\;
-            $p^\prime \longleftarrow f_X(x^\prime)$\;
-            $a \longleftarrow \frac{p^\prime}{p}$\;
-            $r \longleftarrow U(0,1)$\;
-            \If{$r<a$}
-            {
-                $x \longleftarrow x^\prime$\;
-                $p \longleftarrow f_X(x)$\;
-                $i \longleftarrow i+1$\;
-                append $x$ to $s$\;
-            }
-        }
-    }
+    \item Students can select their preferences for how their data is handled and what data is tracked. 
+    \item Students can see and download their own data.
+    \item Students can visually grasp where they are in their educational path and build a an accurate mental model of their progress.
+    \item Students can see the links between courses, assessments and other educational components to help develop their understanding of how their education is shaped, in-line with the learning theory of connectivism.
+    \item Students can utilize their own prior reservoir of work to find missing connections in their mental model that need to be modified.
+    \item Students can gain motivation for completing their educational path.
+    \end{enumerate}
     
-\caption{The Metropolis-Hastings MCMC algorithm for drawing samples from arbitrary probability distributions, 
-specialised for normal proposal distributions $q(x^\prime|x) = \mathcal{N}(x, \sigma^2)$. The symmetry of the normal distribution means the acceptance rule takes the simplified form.}\label{alg:metropolis}
-\end{algorithm}
+    \label{fig:fivegoals}
+    \end{minipage}
+\end{figure}
 
-\subsection{Tables}
 
-If you need to include tables, like Table \ref{tab:operators}, use a tool like https://www.tablesgenerator.com/ to generate the table as it is
-extremely tedious otherwise. 
 
-\begin{table}[]
-    \caption{The standard table of operators in Python, along with their functional equivalents from the \texttt{operator} package. Note that table
-    captions go above the table, not below. Do not add additional rules/lines to tables. }\label{tab:operators}
-    %\tt 
-    \rowcolors{2}{}{gray!3}
-    \begin{tabular}{@{}lll@{}}
-    %\toprule
-    \textbf{Operation}    & \textbf{Syntax}                & \textbf{Function}                            \\ %\midrule % optional rule for header
-    Addition              & \texttt{a + b}                          & \texttt{add(a, b)}                                    \\
-    Concatenation         & \texttt{seq1 + seq2}                    & \texttt{concat(seq1, seq2)}                           \\
-    Containment Test      & \texttt{obj in seq}                     & \texttt{contains(seq, obj)}                           \\
-    Division              & \texttt{a / b}                          & \texttt{div(a, b) }  \\
-    Division              & \texttt{a / b}                          & \texttt{truediv(a, b) } \\
-    Division              & \texttt{a // b}                         & \texttt{floordiv(a, b)}                               \\
-    Bitwise And           & \texttt{a \& b}                         & \texttt{and\_(a, b)}                                  \\
-    Bitwise Exclusive Or  & \texttt{a \textasciicircum b}           & \texttt{xor(a, b)}                                    \\
-    Bitwise Inversion     & \texttt{$\sim$a}                        & \texttt{invert(a)}                                    \\
-    Bitwise Or            & \texttt{a | b}                          & \texttt{or\_(a, b)}                                   \\
-    Exponentiation        & \texttt{a ** b}                         & \texttt{pow(a, b)}                                    \\
-    Identity              & \texttt{a is b}                         & \texttt{is\_(a, b)}                                   \\
-    Identity              & \texttt{a is not b}                     & \texttt{is\_not(a, b)}                                \\
-    Indexed Assignment    & \texttt{obj{[}k{]} = v}                 & \texttt{setitem(obj, k, v)}                           \\
-    Indexed Deletion      & \texttt{del obj{[}k{]}}                 & \texttt{delitem(obj, k)}                              \\
-    Indexing              & \texttt{obj{[}k{]}}                     & \texttt{getitem(obj, k)}                              \\
-    Left Shift            & \texttt{a \textless{}\textless b}       & \texttt{lshift(a, b)}                                 \\
-    Modulo                & \texttt{a \% b}                         & \texttt{mod(a, b)}                                    \\
-    Multiplication        & \texttt{a * b}                          & \texttt{mul(a, b)}                                    \\
-    Negation (Arithmetic) & \texttt{- a}                            & \texttt{neg(a)}                                       \\
-    Negation (Logical)    & \texttt{not a}                          & \texttt{not\_(a)}                                     \\
-    Positive              & \texttt{+ a}                            & \texttt{pos(a)}                                       \\
-    Right Shift           & \texttt{a \textgreater{}\textgreater b} & \texttt{rshift(a, b)}                                 \\
-    Sequence Repetition   & \texttt{seq * i}                        & \texttt{repeat(seq, i)}                               \\
-    Slice Assignment      & \texttt{seq{[}i:j{]} = values}          & \texttt{setitem(seq, slice(i, j), values)}            \\
-    Slice Deletion        & \texttt{del seq{[}i:j{]}}               & \texttt{delitem(seq, slice(i, j))}                    \\
-    Slicing               & \texttt{seq{[}i:j{]}}                   & \texttt{getitem(seq, slice(i, j))}                    \\
-    String Formatting     & \texttt{s \% obj}                       & \texttt{mod(s, obj)}                                  \\
-    Subtraction           & \texttt{a - b}                          & \texttt{sub(a, b)}                                    \\
-    Truth Test            & \texttt{obj}                            & \texttt{truth(obj)}                                   \\
-    Ordering              & \texttt{a \textless b}                  & \texttt{lt(a, b)}                                     \\
-    Ordering              & \texttt{a \textless{}= b}               & \texttt{le(a, b)}                                     \\
-    % \bottomrule
-    \end{tabular}
-    \end{table}
-\subsection{Code}
+%==================================================================================================================================
+\chapter{Design of Initial Prototype}
 
-Avoid putting large blocks of code in the report (more than a page in one block, for example). Use syntax highlighting if possible, as in Listing \ref{lst:callahan}.
+\section{Data Flow} \label{section:data flow}
 
-\begin{lstlisting}[language=python, float, caption={The algorithm for packing the $3\times 3$ outer-totalistic binary CA successor rule into a 
-    $16\times 16\times 16\times 16$ 4 bit lookup table, running an equivalent, notionally 16-state $2\times 2$ CA.}, label=lst:callahan]
-    def create_callahan_table(rule="b3s23"):
-        """Generate the lookup table for the cells."""        
-        s_table = np.zeros((16, 16, 16, 16), dtype=np.uint8)
-        birth, survive = parse_rule(rule)
+The lack of access to student and institute data due to ethical concerns has limited the usability of the prototype, which has resulted in the construction of a partial back-end containing synthetic data grown using the open access OULAD dataset \citep{kuzilek2017open}. A key aspect of the designed hypothetical data flow, shown in Figure \ref{fig:erd}, is the inclusion of a features field for most major entities. This is a placeholder that indicates the use of a feature store; which is a repository that stores pre-computed features that allow us to form several different pipelines to the same machine learning model \citep{kakantousis2019horizontally}.  
 
-        # generate all 16 bit strings
-        for iv in range(65536):
-            bv = [(iv >> z) & 1 for z in range(16)]
-            a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p = bv
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1.0\linewidth]{data/dissertation/images/L4P_DATABASE_ERD.png}    
 
-            # compute next state of the inner 2x2
-            nw = apply_rule(f, a, b, c, e, g, i, j, k)
-            ne = apply_rule(g, b, c, d, f, h, j, k, l)
-            sw = apply_rule(j, e, f, g, i, k, m, n, o)
-            se = apply_rule(k, f, g, h, j, l, n, o, p)
+    \caption{ The designed Entity Relationship Diagram that is used for the creation of our synthetic data. 
+    }
+    \label{fig:erd} 
+\end{figure}
 
-            # compute the index of this 4x4
-            nw_code = a | (b << 1) | (e << 2) | (f << 3)
-            ne_code = c | (d << 1) | (g << 2) | (h << 3)
-            sw_code = i | (j << 1) | (m << 2) | (n << 3)
-            se_code = k | (l << 1) | (o << 2) | (p << 3)
+Features would ideally be engineered through access to data consisting of course specification, intended learning outcomes, teaching materials, reference texts, and student submissions. Feature engineering at this scale is a challenging task, and is outside of the scope of this study, but theoretically possible - and so we must ask the reader to suspend their disbelief.   
 
-            # compute the state for the 2x2
-            next_code = nw | (ne << 1) | (sw << 2) | (se << 3)
+It is important to note that the data flow has been designed to be as adaptable as possible, and thus the preferences entity, detaile in Table \ref{fig:preferences}, contains version control to keep track of and roll out any changes as fast and as safely as possible.
 
-            # get the 4x4 index, and write into the table
-            s_table[nw_code, ne_code, sw_code, se_code] = next_code
+\begin{table}[hbt!]
+\centering
+\caption{Example of data stored within the Preferences Entity}
+\begin{tabular}{p{0.9\linewidth} | p{0.1\linewidth}}
+\hline
+\textbf{Question} & \textbf{Answer} \\
+\hline
+Do you consent to your data being aggregated using machine learning techniques 
+and used for improving learning outcomes for the student body? & Y \\
+Do you wish to receive personalised advice and recommendations based upon any data gathered through machine learning techniques? & N \\
+\hline
+\end{tabular}
+\label{fig:preferences}
+\end{table}
 
-        return s_table
+The achievements entity, detailed in Table \ref{fig:achievements}, contains list of potential achievements to unlock for students with similar flexibility built in. This data flow has been used in combination with stubbing key output data for the prototype.
 
-\end{lstlisting}
+
+\begin{table}[h]
+\centering
+\caption{Example of data stored within the Achievements Entity}
+\begin{tabular}{p{0.25\linewidth} | p{0.75\linewidth}}
+\hline
+\textbf{Name} & \textbf{Description} \\
+\hline
+First Step & Enrolled in the University \\
+Orientation Explorer & Attended University Orientation \\
+Scholar Starter & Achieved a GPA of 3.0 or higher in the first semester \\
+\hline
+\end{tabular}
+\label{fig:achievements}
+\end{table}
+
+
+
+\section{Goals to Components}
+
+Due to the novel methodology utilized, all features created for the LA prototype are modular components for the purpose of further refinement and gathering insights on the identified theoretical factors. In line with \citep{zimmerman2009self} theory of self-regulation, all initial components have been designed to complement the three phases of self-regulation; forethought, performance and self-reflection. The initial components were developed using five initial overarching goals in Figure \ref{fig:fivegoals}.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{data/dissertation/images/components_initial.png}
+    \caption{An overview of the initial components and how they connect into the six goals. The annotation shows how Components I, J and K extend components C, D and E by adding contextual information to the students grasp of where they are on their educational path. }
+    \label{fig:components-overview}
+\end{figure}
+
+\hfill
+\subsubsection{Goal 1 - Students can select their preferences for how their data is handled and what data is tracked. }
+\hfill
+
+The initial preferences selection \textbf{Component A} contains two preferences, as seen in Table \ref{fig:erd}. Component A follows the identified theoretical factor of data autonomy - supporting material for the component includes a thorough explanation of how the data is handled and tracked as well as a short quiz that students can choose to complete to see what their level understanding around data analytics is. Initially this component was designed to have the quiz as a mandatory requirement for students to pass before they could opt-in to the use of the LA system. This design choice was inspired by a discussion surrounding informed consent and how user's attention often does not span to reading through terms and conditions - other suggestions to circumvent this issue include revealing data that will be gathered through a personalized representation \citep{morrison2011informed}. 
+
+
+\subsubsection{Goal 2 - Students can see and download their own data. }
+\hfill
+
+The corresponding \textbf{Component B} for this goal is rather self-explanatory - tables containing user specific data that can be downloaded. An interesting note to include though is that having a downloadable and readable version of a feature map (discussed in Section \ref{section:data flow}) may be quite the tricky implementation hurdle to solve if this prototype was developed into a full-scale implementation. 
+
+\subsubsection{Goal 3 - Students can visually grasp where they are in their educational path and build a an accurate mental model of their progress. }
+\hfill
+
+The components for this goal draw on the research presented by \citet{Ali2012ATool} which focuses on the need to draw upon existing knowledge from the human–computer interaction and visual analytics fields for effective interaction and visualization of the data. Participant J mentioned in the Self-Evaluation section of Table \ref{Analysis:Identification of Theoretical Factors} how tricky it is to grasp progress from simply looking at grades - which is why a more general approach showing student progress over the years has been adapted for the design with a flow graph. 
+\textbf{Component C} shows students past progress through their educational path and \textbf{Component D} current progress during the academic year, with both component stylized as a stacked bar chart. Students have the option to see where they align within their current cohort in terms of marks for submissions. 
+As an added detail, goal visualization and motivation (parts of the forethought phase for self-regulation) are incorporated in the design for \textbf{Component E}, the students future progression. Students can add free form goals of their own and make a little plan to carry them ahead. A nice, mild disclaimer has been tagged onto this section in hopes of not overwhelming students who are uncomfortable with goal setting - reassuring that it is not a necessary nor particularly critical section to fill in.
+Participants were conflicted whether or not predictions of student grades should be an included feature, and thus a possible direction for Component D incorporated visualization of a range of potential grades and their affects on a students GPA. Complications arose from debate surrounding what defined a GPA - this is discussed in further detail in Chapter \ref{section:implementation}.
+
+\subsubsection{Goal 4 - Students can see the links between courses, assessments and other educational components to help develop their understanding of how their education is shaped. }
+\hfill
+
+Various versions for \textbf{Component F} were discussed with participants for this section. The initial idea for the design revolved around having an interactive conversational interface to analyze understanding and hone into areas that students may be struggling with through analyzing their submissions, but utilizing a 3D force-directed graph to visualize the key areas of connections (topics, skills and how they link in across courses) was also considered \citep{boumghar2018enhanced, Asturiano_2023}. \textbf{Component G} showing the proposed changes to courses with evidence and research to support was designed as well, allowing students to communicate with staff to exchange thoughts and ideas on the proposals. 
+
+\subsubsection{Goal 5 - Students can utilize their own prior reservoir of work to find missing connections in their mental model that need to be modified. }
+\hfill
+
+This is where we consider feature mapping the students own past submitted material and reviewing performance via analysis of their work in the cohort. \textbf{Component H}, a component containing an overview of students work showing machine generated feedback for individual assessments was designed. \textbf{Component I} extended the same principle but generalized for different forms of assessment. \textbf{Component J} contains a reflection of the students perceived knowledge on key concepts within courses. Particular emphasis was placed on the difficulties of building a frame of reference for prior knowledge that a student may have as well as the learning undertaken outwith the institute. \textbf{Component K} was created to combat this hurdle, this component contains the daily mini-quiz. This is completely voluntary, and so will most likely not be completed by the majority of students, but the idea is that it functions as a mechanism for data gathering disguised as a fun brain-teaser. Lecturers who would like to do a little data gathering of understanding if students grasped earlier concepts can submit questions, otherwise the questions are created strategically to hone in on students areas of weakness.
+
+\subsubsection{Goal 6 - Students can gain motivation to complete their educational path. }
+\hfill
+
+This goal is complex in nature, and perfect fulfillment of it may be detrimental to sub-groups of students in the long term - as participant S discussed in the initial interview, external motivators are often fickle in nature (Artificial Motivation, Table \ref{Analysis:Identification of Theoretical Factors}). Exploration of motivation is covered in the forethought phase of self-regulation theory - the key here is exploration, rather than outright assignment. Students need to find out what motivates them for themselves. The system cannot simply have inspirational quotes and other stereotypical motivators built-in. \textbf{Component L} uses component of game theory to show students achievements to unlock, which in and of themselves are not motivators - however the underlying theory is that the steps taken to unlock achievements let students gain a familiarity with their own educational path and place within the institute so they can orientate themselves to setting their own goals and motivators. \textbf{Component M} was designed to recommend community events and articles students may be interested in for similar purposes. 
+
+
+
+%==================================================================================================================================
+\chapter{Implementation of Initial Prototype} \label{section:implementation}
+
+\section{The Stack}
+
+Synthetic data has been generated for the partial back-end through utilization of the SDV package \footnote{https://github.com/sdv-dev/SDV, accessed 20th March 2024} in a Google Colab notebook \footnote{https://colab.google/, accessed 20th March 2024} utilizing the pre-existing open access OULAD dataset \footnote{https://analyse.kmi.open.ac.uk/open_dataset, accessed 20th March 2024}. The notebook is accesible to viewers as of 20th March, 2024 \footnote{https://colab.research.google.com/drive/1lSnaridGIWlSIeZTrLKn_l9X8RlrIDC2, accessed 20th March 2024}. Several supporting datasets have been manually created to reflect output generated for the prototype.The data for the back-end is all stored on Google Sheets and pulled in using their API \footnote{https://developers.google.com/sheets/api/guides/concepts, accessed 20th March 2024}. This is an ideal setup for quick development of our small-scale implementation of the prototype, however some snags were ran into during evaluation with access limits being breached for the amount of API requests Google allocates to student developer accounts. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{data/dissertation/images/data_flow_implementation.png}
+    \caption{The data flow of the implementation, with Figure \ref{fig:erd} created as the blank 'courses data' that is then populated with the synthetic data and our sample student record.}
+    \label{fig:data-flow}
+\end{figure}
+
+From Figure \ref{fig:data-flow}, the datasets containing synthetic data\footnote{https://docs.google.com/spreadsheets/d/19C_va6mhpNKIloIoz2CsXLApETjcrByFeIXuJGIGL_I/edit?usp=sharing, accessed 20th March 2024}, sample student record data\footnote{https://docs.google.com/spreadsheets/d/1xybHkOo46AFCRZRgiRjvh_96fMPzDlJ-OkdwBcCbROw/edit?usp=sharing, accessed 20th March 2024}, questions for robotics data\footnote{https://docs.google.com/spreadsheets/d/1xDZzYPkIwPcZkBrwcPesWix3S82-bzoXahwrbCJD5Hc/edit?usp=sharing, accessed 20th March 2024}, achievements sample data\footnote{https://docs.google.com/spreadsheets/d/1tUdzHdXQ8ZusNtaDSZaSDbDNEwnujcUzAewm9_T7dO8/edit?usp=sharing, accessed 20th March 2024}, potential changes sample data\footnote{https://docs.google.com/spreadsheets/d/1KMVu9K5z7ta-G0MrOu-4FPSRaA1RkasEzjt6qpiFuys/edit?usp=sharing, accessed 20th March 2024} and calendar events and deadlines sample data are all available online for viewers as of 20th March, 2024. There is only one student record within the sample student record data, as creation of the data for the back end proved to be a far more complicated task than expected and had already detracted time away from the important aspects of the prototype - such as actually implementing it.   
+
+The implemented prototype has been created with the use of a Hex notebook, ideal for quickly adapting and evolving components as it is particularly suited towards data analytics and has fantastic in-built version control and quick deployment of solutions \footnote{https://hex.tech/?_gl=1*1h5xnv2*_gcl_au*MTc4NTIxNzQ5NC4xNzExNTA0MDAx, accessed 20th March 2024}. The last deployed implementation of our prototype is live as of 20th March, 2024 \footnote{https://app.hex.tech/b4df83f5-9a77-4bb2-892c-7f5eac3642a3/app/791db296-9a10-4eae-b4ea-a363e7ca92da/latest, accessed 20th March 2024}. The code is also accessible to viewers as of 20th March, 2024 \footnote{https://app.hex.tech/b4df83f5-9a77-4bb2-892c-7f5eac3642a3/hex/791db296-9a10-4eae-b4ea-a363e7ca92da/draft/logic, accessed 20th March 2024}. A relevant detail to note is that hex apps do not have native support for iFrame rendering, and as such some components of the live app have been stubbed with images. This solution works to get the intended effect across to the participants for the evolution of the prototype, which we will discuss in the next section. 
+
+
+
+
+%==================================================================================================================================
+\chapter{Evolution of Prototype}
+
+\section{Discussion Section}
+
+For the component evolution, follow up interviews were scheduled with the prior group of participants. All participants bar L attended all two of the follow up interviews. L was not present for the last one. Participants were encouraged to be downright ruthless during their discussion of the prototype, as a tactic used to avoid the confounding effects of acquiescence bias due to the pre-existing relationships between participants and the interviewer.
+
+\subsection{Understanding Connections}
+The first component to be critiqued by participants was component F (Figure \ref{fig:dash-current-proto}), which is responsible for clarifying connections between courses, assessments and other educational components. Whilst discussing the potential of using a conversational interface for this purpose, most of the group had a heavy disdain for interacting with non-human agents. Participant P was particularly against the idea of using an agent as an artificial mechanism to improve themselves, clarifying that their biggest hurdle academically was their introverted nature. They explained that they felt the use of a conversational interface would increase negative feelings of self-worth.
+
+\begin{quote}
+    "You've resorted to talking to a non-existent person, you asocial loser."-Participant P
+\end{quote}
+
+Participants were asked if implementing the underlying goal of the conversational interface through providing passive helpful comments instead of a dialog would be beneficial. When asked for a clarifying example, participants were directed to Clippy, the discontinued intelligent user interface for Microsoft Office \citep{Cassidy_2022}. Unfortunately, participants followed up by reminding the interviewer why Clippy has a rather infamous legacy. Participant I brought up the idea of teaching students extra knowledge around analytics, but then changed their mind about employing the use of a conversational interface for this. Concerns around visual clutter were also brought up. The discussion pivoted back towards means of clarifying the links, and the interviewee brought up the potential use of a 3D force-directed graph. Most of the participants agreed with the idea, liking the simplicity of it. Participant J and P held concerns around the readability of such a graph.
+
+\begin{quote}
+    "I don't think I'd know entirely what to do with it. I mean, for getting an overview of everything you've learned in school it seems pretty cool - especially if you can change the level of detail it displays. But I've never been taught how to break down information that's displayed so, uh, fluidly." - Participant J
+\end{quote}
+
+\subsection{Individual Boundaries and Data Sources}
+
+Components A and B were then discussed (Figure \ref{fig:preferences-proto}, Figure \ref{fig:data-proto}). Participant I had a keen focus on establishing boundaries between the system and the user, with group discussion revolving around what is deemed acceptable. Some participants argued that having data constructed in their social network would be a violation of their boundaries. Others stated that they would have loved to know learners with similar goals, attributes and styles of learning as them - especially for forming groups when it comes to group projects. 
+
+\begin{quote}
+    "I am so tired of working in groups were the majority of people procrastinate to right before the deadline. I don't do my best work like that, and I know you do [in reference to the interviewer] but I just can't. It makes me under-perform. If I could have known who I'd work best with, I would snag them right up. " - Participant I
+\end{quote}
+
+There was a little discourse around this, as Participant J expressed that learning to work with people different to yourself is an essential part of the University experience. Questions arose over whether or not it is fair to create a system that expects student to have traits that can be pinned down consistently, especially as University is widely considered to be quite a turbulous time period in one's life.
+
+\begin{quote}
+    "I was pretty depressed in first year. I don't want that defining my entire University experience." - Participant J
+\end{quote}
+
+There was also some discourse around if tracking activities unrelated to the university experience would be a violation of boundaries. 
+
+\begin{quote}
+    "After last week's chat I actually went and, um, looked up the Uni's learning analytics policy to read up on- yeah [...] and I can't believe they track what students are doing Eduroam [participant went and pulled up the Intitute Policy on LA on their mobile device] - I think that's what it implies with use of university's digital network. Man, that's crazy." - Participant J
+\end{quote}
+
+Participant L disagreed with this statement, believing that students would not be profiled unless there was legitimate cause for concern. 
+
+\begin{quote}
+    "Look, if you're searching stuff that's going to get you into trouble on the university's own network that's kind of on you. It's just passive data gathering, and every open WiFi network does it man - even McDonald's has it in the terms and conditions for the free WiFi. They're [the university] probably incapable of doing anything too dodgy with it. - Participant L
+\end{quote}
+
+This highlights how some of the participants concerns surrounding for profiling and surveillance capitalism were diminished when considering the legitimate use for other student sub-groups in which they are not present in. To put it plainly, some participants boundaries were relaxed when they perceived other participants boundaries being encroached upon.  In line with the complex dimensionality of the concerns given around data tracking and harvesting, particularly surrounding aggregation of data as well as profiling, four main areas of concern were drawn up by the participants. This surrounded their perceived personality traits, their perceived interests, the community of students they are a part of and their learning  (Figure \ref{fig:preferences-proto}). 
+
+Participants also wanted to make a distinct choice between having their data tracked, and having their data aggregated using machine learning specifically. This is partly due to some of the students wanting the option of keeping an eye on the record of any data tracked within the system for their own purposes. This also lets students change their mind on machine learning later on, and still have a bank of data to be analyzed. The last two preferences visible in Figure \ref{fig:preferences-proto} are opt-out, which was the solution discussed with students as these the first one is non optional currently for students, and the second one is critical for improving feedback on prior assessments, component H. The necessity of Component H was heavily stressed by the participant group (Figure \ref{fig:dash-past-proto}). The use of the sliders for component A was critiqued by a participant, who said that the majority of students, used to clicking accept all on terms and conditions with no hesitation, would probably not take the time to read any of the preferences. 
+
+The participant also mentioned, in line with the background research conducted earlier on this phenomenon, that giving students an idea of what exactly is being gathered would be useful. After the interviewer showed a sample of a student's downloaded Moodle Statistics data, concerns were present about overwhelming students with files and data structures that are designed to be processed primarily by code and not by human eyes.
+
+\begin{quote}
+    "If it's anything like that then I'm just going to go click around on it then take a quick exit after finding out it's just a jungle of directories. What does that even mean? How are you even suppose to interpret it? [in refernce to a file containing logs of student clicks] " - Participant S
+\end{quote}
+
+\subsection{Profiling for Recommender Systems}
+Participant I talked about how profiling social media users for targetized advertising particularly bothered them, since so many assumptions are made on someone's likes and dislikes depending on arbitrary characteristics.
+
+\begin{quote}
+    "My Instagram feed keeps trying to sell me beauty products and cosmetics. I don't wear anything on my face and I'm allergic to half of the stuff they show me anyways - but since I keep seeing it, part of my brain gets desensitized and I'm honestly kind of worried that one day I'll go back to being teen me, crying over a pimple or two, doing the next biggest fad and pandering to consumerism." - Participant I
+\end{quote}
+
+Initially participants I and L in the group were adamant that a learner should be able to edit their likes and dislikes for the recommender system, whilst participant S believed that the recommender system should be as unobtrusive as possible, making very general recommendations to students. Participants P and J did not think that a recommender system is a good idea.
+
+\begin{quote}
+    "I really do think learning how to find information is one of the most important skills that you pick up during your studies. We should be encouraging people to think for themselves, and go out, and actually find what they want to learn more about. [...] For stuff that's a little more complex in nature, like politics, I could see a student hive-mind forming around any recommended reading materials. Kind of like the bubble effect thing we were talking about earlier - you're just stuck in an echo chamber, really. Technology can make that so much worse. " - Participant P
+\end{quote}
+
+Most of the participants agreed with the aforementioned statement, and any traces of a recommender system were removed from the prototype.
+
+\subsection{Tracing Data Usage}
+The discussion then revolved to knowing what sources of data are used for which purposes. One of the participants suggested that data which has been utilized for a specific purpose should have a log of what it has been used for contained alongside the data, in hopes of providing more contextual information. This participant took inspiration from Git Logs, referencing an article on file history tracking \citet{Stolee_2022}. 
+
+\begin{quote}
+    "If we can show which files and what data has been touched by which model and then what the output is and what it's been used for, then we can communicate what's going on - no?" - Participant I
+\end{quote}
+
+Whilst this was never implemented in the prototype, the group discussion around it was intense as some participants struggled to wrap their minds around the suggestion. Participants I and S, with pre-existing knowledge of Git, were more attuned to the idea. Participant P stated that they could get behind it, but that the average student would probably not be as concerned.
+
+\subsection{Goal Visualization and Godhart's Law}
+When it comes to planing the students educational path, participant L wanted Component E (Figure \ref{fig:dash-future-proto}) to include the recommender system for course choices as well as events and networking opportunities. Participant P was interested in getting a glimpse of other student's paths - particularly those who also had dyslexia, as they feel that opportunities for natural discussion surrounding positive future paths into a career in their field were limited. 
+\hfill \\
+
+All participants agreed that having a section to write some goals in could be useful. Participants P and S stressed that any metric applied to the goal would not be useful for them, citing the notion of a five year plan as limiting and unnecessarily stressful. Participant I liked the idea of setting up stressful goals, even if they didn't manage to achieve the goals.
+
+\begin{quote}
+    "One of the extra-curricular programs I did was learning how to be an effective coach - and the number one thing they talked about was helping people set their own goals. I hated it at the time, because I felt like I had no control over my own life, but it really forced me to think of what I have got going on and what I want to get to next. Sort of forced me to lock in? [...] Like hey, even if it doesn't work out - goals are so cool. It's really cool to want things." - Participant I
+\end{quote}
+
+Participant J did not want the goals visible to any members of staff, explaining that they'd get stressed out if their Advisor of Studies could see it. Multiple participants agreed with this train of thought, and it was decided that if a student chose to share that information they could - but they should never be defined by it. The reasoning behind the addition of the achievements, Component L, to planning student's future educational path was that participants argued students should be able to see how close they are to certain achievements, as well as see what achievements there are - seeing it as a feature that would increase motivation and provide them with a sense of direction. However, one participant expressed concerns over the commodification of education with the use of heavy sarcasm. 
+
+\begin{quote}
+    "Hey if we're using gamification then go all in. I want to see what weird little paths my guy [in reference to himself as a video game character] can unlock. I want to be able to get as many achievements as possible - so I can really feel that sense of accomplishment. Speed-run here we go!" - Participant S
+\end{quote}
+
+Participant J was of the opinion that as an institute, any achievements set up for students to earn would feel artificial in nature, referencing having been forced to interact via commenting on student made posts on an online platform for a grade and explaining how that decreased the educational worth of having interactions on an online platform for them. Applying a measure of success to a goal would distort it's nature, particularly if there's an incentive - since people will start to change their behaviour to meet that goal - a common occurrence in reinforcement learning that is referred to as Goodhart's Law \citep{elton2004goodhart}. Participant S suggested in response to Participant J that the achievements to unlock should be nominated by students, for students. 
+
+
+\subsection{Assessing Current Progress}
+
+Participants requested a centralized spot to view deadlines as well as coursework that makes up their grades (Figure \ref{fig:dash-current-proto}). Whilst there were some concerns over Goodhart's Law enforcing attitudes towards placing the priority on getting high grades, a term one participant affectionately referred to as 'marks-maxing', participants argued that the system the institute has built requires them to achieve certain measures of success to be able to graduate - and thus the institute should provide an accurate overview of where they are on the measures. Participant P did suggest that a grade overview for components in courses students are currently taking could work counter-intuitively for students with sub-par grades, reinforcing a negative mental model when it comes to assessing what they are capable of. 
+
+The question of how the system might understand progress students make outside of university given submissions was brought into question. Another concern was the validity of assuming a student can retain understanding of a particular topic that the student submitted an assessment submission on. 
+
+\begin{quote}
+    "Sometimes I'll look back at assessments I did in year one and just be confused. Especially anything to do with sigma16 [a computer architecture designed for research and teaching in computer systems, taught in the institute] - absolute gibberish to me. I got a great grade on that assessment but man, do I simply not remember anything, at all, in the slightest. Had a first year ask me for help the other day - I would definitely have had to cover all of that again. Probably could learn it in a shorter amount of time, but still would have to re-learn it." - Participant I
+\end{quote}
+
+Participants expressed their desire for functionality that aids students in remembering relevant past material for their current material. This could be achieved through a modified recommender system, taht works based off of previous knowledge the student has as well as what they're currently working on. Say, for example, a question in an assessment references a lecture from two weeks ago - the recommender system here would recommend the relevant resource if the student requested external aid. Participants disliked this solution heavily. There were grievances raised around unfair advantages for students who used the system compared to those that opted out, as well as diverting student focus onto specific solutions rather than letting them brainstorm creative ways to fail and then succeed.
+
+\begin{quote}
+    "I like starting from scratch when I have to code something. I know you've told me 'don't re-invent the wheel'. [...] I learn better creating stuff from scratch - and understanding everything that goes into it. Yeah, it takes longer. It's also more satisfying. " - Participant S
+\end{quote}
+
+As an alternative Component K, the daily quiz, was created. Questions can be designed to influence students into revising sections of past knowledge. Repeated and spaced out cued recall can be very efficient at 'jogging' the memory of students \citep{cull2000untangling}. Participants had discourse over the amount of questions to include, but settled upon no more than three - every day. 
+
+\begin{quote}
+    "I know so many other people in my year who do the daily Wordle, and I personally also complete the Letterboxd, Spelling Bee, Connections and the Mini Crossword - it's so addicting and it's a great challenge, because I feel like it's very low stakes. If we can get the low stakes message across to students, I can see it scratching the same kind of itch." - Participant I
+\end{quote}
+
+Participant S disagreed with the notion that a daily quiz would carry the same effects as the NYT mini-games. They stated that competitive nature of the NYT mini-games is the appeal, and since daily quiz questions are personalized for each student, then there isn't really a competition. The functionality of the quiz can extend further to lecturers also submitting questions for their teaching cohort and gauging what students think of key misconceptions in material to know if a mental schemata needs more work re-framing. Most participants seemed keen on this idea, however some were wary of misuse by lecturers - raising concerns over the potential of one lecturer overusing it and distorting the model to their favour. 
+
+\subsection{Evaluating the Past}
+
+All participants agreed that they struggle to conceptualize how they have done on prior work. Participant J in particular mentioned that having a visualization of the difference in level from year to year coursework would be useful during the initial interview, which is why the overview containing SQA levels and grades for each course was created (Figure \ref{fig:dash-past-proto}). All participants had a positive reaction towards this section.
+
+\begin{quote}
+    "I like that it gives you your GPA as well, since I usually don't put the work into calculating it out. The strands being different colours for different subject areas is rather interesting. I've only ever done courses in one subject area so this really isn't as applicable for me but it's interesting to look at regardless. " - Participant P
+\end{quote}
+
+Most participants did not enjoy the violin-graph representation of the assessment types and grades received, but did prefer it to the prior pie-chart solution (Component I). The intended behaviour set for clicking on a violin graph was to receive a small summary of feedback compiled from the reservoir of marker and ML feedback for each assessment type i.e. clicking on Group Work would result in a blurb advising this student to pay particular attention to their time keeping skills when it comes to doing group work last minute, and advise them to take more responsibility in leading the group if they are confident in doing so. Clicking on Examinations may give feedback surrounding timing, and suggest students move on from questions that they find too challenging quicker during the exam. The participants were very positive surrounding this concept, stating that it's often hard to notice repeated bad habits that they fall into.
+
+Participants were also adamant about employing machine learning to create more detailed feedback, and were particularly pleased to hear that students previously submitted assessments could result in feedback that addresses areas that they put effort into improving (Component H). Participant I stressed the importance of making sure assessments still were looked at by real people.
+
+\begin{quote}
+    "I don't think that we should replace markers with machine learning, not just cause it's unethical, but also because there's a certain level of comfort with knowing that someone, somewhere, actually looked at this piece of work with their eyes. Everything we do, for the most part, sort of just exists as a means to improve in our courses - once you submit something, that's you done with it. And I think putting so much effort into something for it to not be appreciated by another person is just really tragic." - Participant I
+\end{quote}
+
+Participants P and S both stressed that having machine learning actually return a grade for an assessment takes away from their fun in academia. 
+
+\begin{quote}
+    "I think we've already discussed this, but developing your own style of thinking is a great thing in academia. We're here to learn to be individuals and think outside of the box in our applied areas, at least, that's the ideal." - Participant P
+\end{quote}
+
+Participants did not see value around having feedback around their progression in courses, or at the end of a course (Component J). Participant S stated that they preferred to self-evaluate their progress, and would rather not get 'nagged' at by their computer. Participant J described how it would inevitably stress them out even more, since there's nothing they could really do about either. 
+
+\begin{quote}
+    "If it's at the end - it's over. I'm done with the course. I have other things to focus on. I don't even do end of year surveys. In the middle? Listen, I already know I'm struggling. " _ Participant J
+\end{quote}
+
+Participants could see more value in having feedback on specific elements, such as assessments and bad habits, rather than in general for each course. This stems from the limited application area of course-related feedback. Feedback, machine generated or human, seems to only be as valuable as it is beneficial and useful for students. When asked if the visualization of student grades in the cohort is useful, mixed opinions were given by participants. The overall consensus seems to be that in certain scenarios, participants would like to check how their grade compares to the cohort i.e. when presented with a grade higher or lower than their usual.
+
+\subsection{Participant's Concluding Thoughts}
+
+When asked if participants would use the fully implemented version of the prototype that we created, all five said that they would. Participant S stated the main reason for changing their mind as the option to opt out of specific features that they felt were invasive - particularly getting compared and profiled with others for the Community aspect as well as having their behaviour tracked and extrapolated in the Traits aspect. Concerns around the institute not having the students best interests at heart were still present in participants, as well as concerns around the potential for dissuading student creativity and expressive freedom. When questioned about concerns around behaviourism, participants still felt that the issue lies in pushing past students boundaries without them being aware. One participant said that if a student can be manipulated into doing better academically, that's 'on them' and 'an overall benefit to society'. 
+
+Participants were curious to see practical implementations featuring the scaffolding of external motivators into internal, and whether or not the concerns around artificial motivators were pressing enough to be addressed, particularly in the modern world of inspirational media. Three of the participants expressed that their understanding of machine learning had improved thorough the course of this study, whilst all agreed that their understanding of the scope of LA had broadened. All agreed that this contributed to them seeing LA in a more nuanced light - with one participant expressing that their prior beliefs centered around the general hysteria around black box implementations of code, 'spurred by watching too many episodes of Black Mirror'. What this highlights is the enhanced need for educating students about machine learning. Participants felt that whilst LA has the potential to replace human connection, it ideally should be used to foster a stronger sense of understanding amongst those in the educational ecosystem. Participants particularly felt that the prototype had good potential for improving students understanding of themselves and were they are in their educational path. When asked if they felt that the end result would also be representative of the greater student populations views, concerns were raised amongst the participants about the small size of the participant group, and the bias present in everyone sharing similar outlooks on life. 
+
+\section{The Prototype}
+
+The aim of the interviews is qualitative research into student insights regarding the development and implementation of an institute-wide LA system, and as such the prototype reflects it's intended use as a tool for discussion. It is best viewed online, where it should still be accessible as of 20th March, 2024 \footnote{https://app.hex.tech/b4df83f5-9a77-4bb2-892c-7f5eac3642a3/app/791db296-9a10-4eae-b4ea-a363e7ca92da/latest,
+accessed 20th March 2024}.   
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{data/dissertation/images/preferences.png}
+    \caption{The preferences page, allowing users to set their own boundaries with component A. }
+    \label{fig:preferences-proto}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{data/dissertation/images/future.png}
+    \caption{A section of the dashboard page with Components E and L.}
+    \label{fig:dash-future-proto}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{data/dissertation/images/current.png}
+    \caption{A section of the dashboard page with Components D, F, K and M.}
+    \label{fig:dash-current-proto}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{data/dissertation/images/past.png}
+    \caption{A section of the dashboard page with Components C, H, I and J.}
+    \label{fig:dash-past-proto}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{data/dissertation/images/data.png}
+    \caption{The data handling page with Component B.}
+    \label{fig:data-proto}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{data/dissertation/images/changes.png}
+    \caption{The proposed educational changes page, with component G.}
+    \label{fig:changes-proto}
+\end{figure}
 
 %==================================================================================================================================
 \chapter{Evaluation} 
-How good is your solution? How well did you solve the general problem, and what evidence do you have to support that?
 
-\section{Guidance}
-\begin{itemize}
-    \item
-        Ask specific questions that address the general problem.
-    \item
-        Answer them with precise evidence (graphs, numbers, statistical
-        analysis, qualitative analysis).
-    \item
-        Be fair and be scientific.
-    \item
-        The key thing is to show that you know how to evaluate your work, not
-        that your work is the most amazing product ever.
-\end{itemize}
+\section{Aims}
+RQ 1: Insights from past and current research for institute-wide LA implementation.
 
-\section{Evidence}
-Make sure you present your evidence well. Use appropriate visualisations, reporting techniques and statistical analysis, as appropriate.
+The dissertation successfully addresses insights from past and current research for institute-wide LA implementation. Past insights are addressed through an extensive literature review, identifying key challenges and potential benefits of LA. The use of the novel methodology for research with a sub-group of current students within the institute offers a deep dive into student expectations and concerns. A key focal point of the research conducted has been changes in perception of LA due to partaking in the development process.
 
-If you visualise, follow the basic rules, as illustrated in Figure \ref{fig:boxplot}:
-\begin{itemize}
-\item Label everything correctly (axis, title, units).
-\item Caption thoroughly.
-\item Reference in text.
-\item \textbf{Include appropriate display of uncertainty (e.g. error bars, Box plot)}
-\item Minimize clutter.
-\end{itemize}
+RQ 2: Best practices around navigating ethical and legal complexities surrounding analytics.
 
-See the file \texttt{guide\_to\_visualising.pdf} for further information and guidance.
+The discussion during the evolution of the prototype particularly showcases the ethical and legal considerations in implementing LA systems, with participants discussing data privacy, security, and the potential for misuse. We emphasize the importance of transparency and student autonomy in data handling. The prototype has been designed to allow users to regain data autonomy. Focus was placed in ensuring adaptability built into the prototype, creating potential to evolve alongside the institute's use of pedagogical frameworks, the land's legal requirements and the prevalent culture surrounding analytical ethics in a digital age.
 
-\begin{figure}
-    \centering
-    \includegraphics[width=1.0\linewidth]{images/boxplot_finger_distance.pdf}    
+RQ 3: Theoretical factors in successful LA development and implementation
 
-    \caption{Average number of fingers detected by the touch sensor at different heights above the surface, averaged over all gestures. Dashed lines indicate
-    the true number of fingers present. The Box plots include bootstrapped uncertainty notches for the median. It is clear that the device is biased toward 
-    undercounting fingers, particularly at higher $z$ distances.
-    }
+Through the initial interviews, the research identifies key theoretical factors including users trust in code and the institute, concerns raised around artificial motivation, the potential of loosing unique aspects involved in education, questions around fairness, when behaviourism toes the line, the perils of surveillance capitalism, issues surrounding profiling, the need for data autonomy, underlying goal of aiding self-evaluation, and the importance of maintaining human connections despite the changes in relationship that occur (Figure \ref{Analysis:Identification of Theoretical Factors}). We argue that supporting students on their educational path should be the primary goal of any institute-wide LA system. 
 
-    % use the notation fig:name to cross reference a figure
-    \label{fig:boxplot} 
-\end{figure}
+
+\section{Research Design}
+
+Our methodology utilizes qualitative design to gain an understanding of a set group of students beliefs, experiences, attitudes, behavior, and interactions with a continuously evolving institute-wide LA prototype. A combination of agile practices and participatory design principles were utilized, with the created prototype primarily serving it's purpose as an information-gathering device. This novel methodology has been designed with the purpose of gaining holistic insights into the impact LA can have on students lives. Thematic analysis has been conducted in line with \citet{nowell2017thematic} advice on the quality of trustworthiness, ensuring encoding of the transcripts has been conducted in a precise, consistent, and exhaustive manner. The analysis of interview two included identifying key theoretical factors through systematically grouping supporting evidence across all five interviews. The continued existence of the ten identified key factors have been verified in the discussion section, with the re-emergence of commonalities encoded across two follow up interviews. 
+
+Concerns are present around the summarization of these group interviews, as well as around loss of contextual information present. There has also been a reordering of the narrative for the discussion section as it is comprised of transcripts taken across two group interviews. In line with a connectivist lens, participants were encouraged to use external resources if they preferred to convey their ideas across. This was keenly appreciated by the participants, and allowed us to gain insights that they may not have felt comfortable expressing on their own. Use of a whiteboard was available for the last interview, and post-it note scribbles were also encouraged by the interviewer. These scribbles have been included in the transcript via a short summary of the scribble included in square brackets, which is the syntax recommended in academic writing for providing context descriptors of non-text based items \citep{AI_2023}.
+
+
+\subsection{Limitations}
+
+There is only one author who is making very ambitious use of the term 'we' in this paper, and thus the encoding of the transcripts is done through the lens of only one person. This has decreased the validity of the thematic analysis. On a similar note, there most certainly is interviewer and response bias present - particularly due to the pre-existing relationship between participants and the interviewer. \citet{galdas2017revisiting} argues that interviewers carrying out qualitative research are an integral part of the process as well as the final product, and thus separating the researcher from their research is neither possible nor desirable. They subscribe to the notion that any prominence placed on bias comes from the expected requirement for research to have a demonstrable wider impact. Whilst this can be a desirable trait for publication, it raises the question of whether or not viewing bias is a problem that needs to be resolved through positivist lens.
+
+\section{Results}
+
+\section{Analysis and Discussion}
+
+Through our research into the implementation and student perceptions of Learning Analytics (LA) within an educational setting, several key takeaways have emerged. The use of a novel methodology combining agile practices with participatory design principles has facilitated a deep engagement with a select subgroup of students - although it is unclear whether this is primarily due to utilizing our novel methodology or leading research as a student, for students. This engagement has not only revealed insights into students' expectations and concerns regarding LA but also illuminated shifts in their perceptions of LA as they participated in the development and evaluation of an LA prototype system. Students were less wary of LA after participating in the development process, and prior concerns were, to an extent, perpetuated by negative stereotypes in pop culture. 
+
+A critical result from our research indicates a heightened sensitivity among students to the ethical dimensions of LA, particularly around data privacy, autonomy, and the potential for misuse. Students expressed a strong desire for transparency in data handling and a significant degree of control over what data is collected and how it is utilized. This reflects a broader concern about surveillance and the commodification of personal data within digital platforms. Creating a positive culture around the use of LA and encouraging student creativity, digital autonomy and institute transparency dissuaded some concerns. We also place a very strong emphasis on ensuring LA does not replace nor negatively impact the required human connection for students to develop and mature.
+
+Lastly, the research highlights the importance of tailoring LA systems to accommodate diverse student needs and preferences. Participants valued the ability to opt out of certain features, indicating a need for customizable and flexible LA solutions that respect individual boundaries and learning preferences. Our participant group viewed LA as an inevitable change within higher education, and took the mindset of making the change as accommodating as possible to users who could potentially be disadvantaged - rather than simply finding concerns in LA, steps were taken to attempt mitigating the impact of consequences. In the author's opinion, this mindset would do well to fuel future research within the field.
 
 
 %==================================================================================================================================
@@ -528,6 +853,32 @@ Summarise the whole project for a lazy reader who didn't read the rest (e.g. a p
         won't get credit for things you haven't done}.
 \end{itemize}
 
+\section{Summary}
+
+In response to the growing demand for personalized learning experiences driven by the adoption of a constructivist framework in higher education,  we embark on an exploration of Learning Analytics (LA) within higher education, focusing on how a comprehensive, institute-wide LA system can be designed and implemented to enhance the educational journey of students. Grounded in Zimmerman and Moylan's theory of self-regulation, the research aimed to support students across various phases of their educational journey by providing insights into their learning process and fostering a positive educational culture around LA. A novel research methodology  combining agile practices with participatory design principles, conducted through a connectivist lens, was employed to engage a select subgroup of students in the development and evaluation of an LA prototype. This approach facilitated an in-depth exploration of students' perceptions, expectations, and concerns regarding LA, revealing a nuanced understanding of how LA can be perceived as a beneficial tool rather than an intrusive surveillance mechanism. 
+
+Our three areas of research follows as such:
+
+\begin{itemize}
+    \item What insights can we garner from past research and current research with students for an institute-wide LA implementation?
+    \item How can institutes best navigate the complex ethical and legal playing field surrounding analytics?
+    \item What are the major theoretical factors involved in a successful developmental period and implementation of a LA system? 
+    
+\end{itemize}
+
+Identified theoretical factors impacting students perception of LA gathered during initial interviews conducted prior to the design period include; pre-existing trust in code and the institute, concerns raised around artificial motivation, the potential of loosing unique aspects involved in education, questions around fairness, when behaviourism toes the line, the perils of surveillance capitalism, issues surrounding profiling, the need for data autonomy, underlying goal of aiding self-evaluation, and the importance of maintaining human connections despite the changes in relationship that occur (Figure 3.1). Through the iterative design and evaluation of the prototype, students' perceptions of LA as well as the discussion around the identified theoretical factors shifted positively, demonstrating the potential of participatory design in addressing ethical concerns and enhancing the acceptability of LA systems.
+
+Our analysis and discussion of the results place importance on developing a positive institute culture surrounding LA. All participants indicated that they feel LA will become an inevitable aspect of higher education - and as such, a growth mindset was adopted, visible in the discussions present for the follow up interviews around evolution of the prototype. Rather than simple pointing out concerns, students worked together to attempt mitigating the negative impact of consequences present in agreed upon solutions. Concrete results from the study include the development of a prototype LA system that was favorably received by participants who were originally opposed to the use of LA, partly in due to the customizable and flexible nature of the solution. Respecting individual students boundaries was a key corner stone of the implementation. 
+
+As an interesting note, the prototype also demonstrates key functionalities desired by our select group of students, such as the ability to track their academic progress, visualize connections between learning materials, and receive personalized feedback and recommendations. The accompanying background literature review has a deeper understanding of the theoretical and practical aspects of implementing LA in higher education incorporating concerns from multiple stakeholders points of view, particularly focusing on criticisms present when the system does not bring about expected outcomes. The underlying motivations present in institute-wide implementations of LA are brought to question.
+
+\section{Future Work}
+
+
+Exploring the integration of AI and machine learning technologies by examining the adaptability and predictive capabilities of LA systems represents a promising direction for future work, particularly as there is no implementation of the theoretical backed and machine learning elements discussed thorough this dissertation. The author acknowledges that creative liberties have been taken with the capabilities of current LA machine learning applications during interview discussions. What exactly these models predict, or the connections and feature maps they make, would be a very intriguing area to conduct research in. This research should be approached with caution, keeping ethical considerations at the forefront to ensure that the deployment of advanced technologies does not compromise student privacy or autonomy.
+
+Future research building directly off of our work should direct their focus on expanding the participatory design approach in the novel methodology to include a broader and more diverse range of students. This will help in capturing a wider array of perspectives and needs, fueling the development of more inclusive and effective LA systems. There is a real need in the field of LA for longitudinal studies, to assess the long-term impact of implemented institution-wide LA. Exploratory research should also be conducted on ways of evaluating the success of an institute-wide LA system without introducing measures that could inevitably reinforce the ramifications of Goodhart's Law.
+
 %==================================================================================================================================
 %
 % 
@@ -538,25 +889,22 @@ Summarise the whole project for a lazy reader who didn't read the rest (e.g. a p
 
 \chapter{Appendices}
 
-Typical inclusions in the appendices are:
+\section{Link to Implementation}
 
-\begin{itemize}
-\item
-  Copies of ethics approvals (required if obtained)
-\item
-  Copies of questionnaires etc. used to gather data from subjects.
-\item
-  Extensive tables or figures that are too bulky to fit in the main body of
-  the report, particularly ones that are repetitive and summarised in the body.
+{\centering
+\includegraphics[width=0.6\textwidth]{data/dissertation/images/qr.png}
 
-\item Outline of the source code (e.g. directory structure), or other architecture documentation like class diagrams.
+\\
+Generated QR code for the implementation. Site may load strange on mobile devices, so accessing it here is not recommended. QR code last accessed 29th March, 2024.
 
-\item User manuals, and any guides to starting/running the software.
+\centerline{\href{https://app.hex.tech/b4df83f5-9a77-4bb2-892c-7f5eac3642a3/hex/791db296-9a10-4eae-b4ea-a363e7ca92da/draft/logic?view=app&tab=my-preferences}{Access to the site is also available by clicking on this text.}}
 
-\end{itemize}
+}
 
-\textbf{Don't include your source code in the appendices}. It will be
-submitted separately.
+\section{Ethics Checklist}
+
+\includepdf[pages=-]{data/dissertation/ethics/L4D_CS_ethics_checklist_signed_AM.pdf}
+
 
 \end{appendices}
 
