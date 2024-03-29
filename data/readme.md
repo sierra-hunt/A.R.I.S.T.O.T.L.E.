@@ -1,3 +1,7 @@
+## Author's Note
+
+Students gave verbal consent during the recording of the transcripts. Transcripts cannot be uploaded as they contain sensitive and identifying information - which goes against GDPR. This was the advice given to me by my supervisor. Introduction and debrief scripts are included in the ethics folder.
+
 ## Data
 Keep your data (e.g. from evaluations here)
 
