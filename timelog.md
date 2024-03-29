@@ -183,3 +183,156 @@
 * *8 hours* Researching how to write formally and re-writing parts of dissertation to Overleaf project. Still not confident in writing. Potential for masterclass visit?
 
   
+## Week 16
+
+### 16 Jan 2024
+
+* *8 hours* Dissertation planning: Spent time outlining the dissertation structure but got sidetracked by unrelated research.
+
+### 17 Jan 2024
+
+* *5 hour* Prototype development attempt: Made a start on coding but quickly became overwhelmed and switched to reviewing literature instead.
+
+### 18 Jan 2024
+
+* *4 hours* Procrastination through "research": Fell down a rabbit hole of tangentially related articles, convincing myself it was relevant for the literature review. And it was eventually!
+
+### 19 Jan 2024
+
+* *7 hour* Attempted to extract student data from Moodle and Hear transcripts but faced so, so, so many issuess.
+
+### 20 Jan 2024
+
+* *3 hours* Transcribing interviews: Managed to transcribe half of one interview before getting distracted by organizing my workspace. It looks cute though!
+
+## Week 17
+
+### 23 Jan 2024
+
+* *1 hour* Meeting preparation: Spent more time worrying about what had not been accomplished and then started compiling useful notes.
+
+### 24 Jan 2024
+
+* *1.5 hours* Meeting with Alistair: Discussed the lack of progress and the issues with Moodle data. Agreed on a need to refocus and prioritize deliverables.
+
+### 26 Jan 2024
+
+* *2 hours* Literature review: Added a few more sources to the literature review but struggled to integrate them cohesively.
+
+### 27 Jan 2024
+
+* *3 hours* Continued transcribing interviews: Finished transcribing the first interview but did not start on the next.
+
+## Week 18
+
+### 30 Jan 2024
+
+* *1 hour* Planning for data visualization without real data: Explored hypothetical solutions for the lack of Moodle data.
+
+### 31 Jan 2024
+
+* *2 hours* Writing: Vaguely outlined the methodology section, avoiding detailed explanation of the Moodle data issue.
+
+### 1 Feb 2024
+
+* *2 hours* Procrastination disguised as work: Reorganized all digital files related to the dissertation, accomplishing little.
+
+### 2 Feb 2024
+
+* *2 hours* Attempted to address feedback: Made minor adjustments to the prototype based on early feedback but lacked direction.
+
+## Week 19
+
+### 6 Feb 2024
+
+* *3 hours* Dissertation writing: Attempted to refine the discussion section but mostly ended up revising previously written parts.
+
+### 7 Feb 2024
+
+* *2 hours* Meeting with Alistair: Admitted to procrastination issues and discussed strategies to mitigate them moving forward.
+
+### 8 Feb 2024
+
+* *1 hour* Planning follow-up interviews: Organized two follow-up group interviews to supplement initial findings but did not prepare the interview guide.
+
+## Week 20
+
+### 13 Feb 2024
+
+* *4 hours* Conducted group interviews: Managed to carry out the interviews but faced difficulties in keeping the discussion on track.
+
+### 14 Feb 2024
+
+* *5 hours* Dissertation writing and procrastination: Alternated between writing the results section and aimlessly browsing the internet for inspiration.
+
+## Week 21
+
+### 20 Feb 2024
+
+* *4 hours* Transcribing group interviews: Started transcribing the group interviews but made slow progress due to frequent breaks.
+
+### 21 Feb 2024
+
+* *3 hours* Dissertation writing: Attempted to incorporate the group interview data into the discussion but struggled to draw clear conclusions.
+
+### 22 Feb 2024
+
+* *2 hours* Literature review expansion: Added more sources to the literature review in an attempt to bolster the argument but lacked a clear focus.
+
+## Week 22
+
+### 27 Feb 2024
+
+* *1 hour* Meeting with Alistair.
+
+* *6 hours* Dissertation editing: Spent a considerable amount of time tweaking the language and structure of the dissertation, with minimal substantive improvement.
+
+### 28 Feb 2024
+
+* *3 hours* Final review and submission prep: Read through the dissertation, feeling  very uncertain about its coherence!!!!!!!!
+
+## Week 23
+
+### 5 Mar 2024
+
+* *2 hours* Meeting with Alistair.
+
+### 19 Mar 2024
+
+* *1 hour* Cried!
+
+### 21 Mar 2024
+
+* *2 hours* Meeting with Alistair and getting my crap together.
+
+### 22 Mar 2024
+
+* *14 hours* Getting my crap together.
+
+### 23 Mar 2024
+
+* *9 hours* Getting my crap together.
+
+### 24 Mar 2024
+
+* *10 hours* Getting my crap together.
+
+### 25 Mar 2024
+
+* *14 hours* Getting my crap together.
+
+### 26 Mar 2024
+
+* *4 hours* Getting my crap together.
+
+### 27 Mar 2024
+
+* *9 hours* Getting my crap together.
+
+### 28 Mar 2024
+
+* *13 hours* Getting my crap together.
+
+### 29 Mar 2024
+
+* *3 hours* I got it togther! If you've made it to this part of my time log, hi! I do not understand the concept of time.
