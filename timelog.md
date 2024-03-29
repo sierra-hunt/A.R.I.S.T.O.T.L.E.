@@ -189,9 +189,6 @@
 * *2 hours* Added to dissertation, researched on theoretical educational frameworks.
   
 
-  
-## Week 16
-
 ### 16 Jan 2024
 
 * *8 hours* Dissertation planning: Spent time outlining the dissertation structure but got sidetracked by unrelated research.
@@ -212,7 +209,6 @@
 
 * *3 hours* Transcribing interviews: Managed to transcribe half of one interview before getting distracted by organizing my workspace. It looks cute though!
 
-## Week 17
 
 ### 23 Jan 2024
 
@@ -230,8 +226,6 @@
 
 * *3 hours* Continued transcribing interviews: Finished transcribing the first interview but did not start on the next.
 
-## Week 18
-
 ### 30 Jan 2024
 
 * *1 hour* Planning for data visualization without real data: Explored hypothetical solutions for the lack of Moodle data.
@@ -248,8 +242,6 @@
 
 * *2 hours* Attempted to address feedback: Made minor adjustments to the prototype based on early feedback but lacked direction.
 
-## Week 19
-
 ### 6 Feb 2024
 
 * *3 hours* Dissertation writing: Attempted to refine the discussion section but mostly ended up revising previously written parts.
@@ -262,8 +254,6 @@
 
 * *1 hour* Planning follow-up interviews: Organized two follow-up group interviews to supplement initial findings but did not prepare the interview guide.
 
-## Week 20
-
 ### 13 Feb 2024
 
 * *4 hours* Conducted group interviews: Managed to carry out the interviews but faced difficulties in keeping the discussion on track.
@@ -271,8 +261,6 @@
 ### 14 Feb 2024
 
 * *5 hours* Dissertation writing and procrastination: Alternated between writing the results section and aimlessly browsing the internet for inspiration.
-
-## Week 21
 
 ### 20 Feb 2024
 
@@ -286,8 +274,6 @@
 
 * *2 hours* Literature review expansion: Added more sources to the literature review in an attempt to bolster the argument but lacked a clear focus.
 
-## Week 22
-
 ### 27 Feb 2024
 
 * *1 hour* Meeting with Alistair.
@@ -297,8 +283,6 @@
 ### 28 Feb 2024
 
 * *3 hours* Final review and submission prep: Read through the dissertation, feeling  very uncertain about its coherence!!!!!!!!
-
-## Week 23
 
 ### 5 Mar 2024
 
